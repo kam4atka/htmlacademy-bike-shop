@@ -1,0 +1,25 @@
+.header {
+  background-image: url("../img/bg-intro@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-bg-intro;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/bg-intro@2x.jpg");
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .header {
+    background-position: 60% 0;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .header {
+    background-size: auto;
+    background-position: 34% 8%;
+  }
+}

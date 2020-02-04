@@ -1,0 +1,36 @@
+.nav-user {
+  margin-left: 25px;
+}
+
+.nav-user__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-right: 26px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    outline: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .nav-user {
+    margin-left: 0;
+  }
+}
