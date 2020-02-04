@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Hagin Caps Medium";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Hagin Caps Medium"),
+    local("Hagin-Caps-Medium"),
+    url("../fonts/HaginCapsMedium.woff2") format("woff2"),
+    url("../fonts/HaginCapsMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Roboto Medium"),
+    local("Roboto-Medium"),
+    url("../fonts/Roboto.woff2") format("woff2"),
+    url("../fonts/Roboto.woff") format("woff");
+}
