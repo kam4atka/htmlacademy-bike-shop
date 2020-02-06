@@ -13,9 +13,9 @@
   <link rel="preload" href="fonts/Roboto.woff" as="font" crossorigin="anonymous">
 </head>
 <body>
-  <header class="header">
+  <header class="header header_main">
     <div class="container">
-      <div class="header-nav">
+      <div class="header-nav header-nav_main">
         <a class="header-nav__logo">
           <svg width="184" height="29">
             <use xlink:href="#icon-logo">
@@ -42,7 +42,7 @@
           <div class="nav-main__body">
             <ul class="nav-main__list">
               <li>
-                <a href="#">Велосипеды</a>
+                <a href="catalog.html">Велосипеды</a>
               </li>
               <li>
                 <a href="#">Аксессуары</a>
@@ -104,11 +104,11 @@
           </ul>
         </div>
       </div>
-      <div class="header-intro">
+      <div class="header-intro intro">
         <svg class="intro__icon" width="508" height="146">
           <use xlink:href="#icon-intro">
         </use></svg>
-        <a class="intro__link" href="#">В магазин</a>
+        <a class="intro__link" href="catalog.html">В магазин</a>
         <ul class="intro__social">
           <li class="intro__social-item">
             <a class="intro__social-link" href="#">
@@ -138,8 +138,174 @@
       </div>
     </div>
   </header>
+  <h1 class="visually-hidden">Главная страницы магазина</h1>
+  <section class="catalog">
+    <div class="container">
+      <h2 class="visually-hidden">Каталог велосипедов</h2>
+      <div class="catalog__wrapper">
+        <p class="catalog__title">У нас Более 200 моделей прогулочных велосипедов для настоящих мужчин</p>
+        <p class="catalog__condition">Бесплатный выездной тест-драйв на все модели. Система рассрочки 0-0-5. Для членов клуба бесплатно предоставляется выездной сервис, зимнее хранение и куча привелегий от партнеров.</p>
+      </div>
+      <div class="catalog__block catalog-slider">
+        <div class="catalog-slider__actions">
+          <button class="catalog-slider__prev" type="button">Prev</button>
+          <button class="catalog-slider__next" type="button">Next</button>
+        </div>
+        <div class="catalog-slider__list">
+          <div class="catalog-slider__item slider-product">
+            <div class="slider-product__photo">
+              <img src="img/bikes/bike-04@1x.png" srcset="img/bikes/bike-04@2x.png 2x" alt="Фотография NEUZER Chopper Apocalypse">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title" href="product.html">NEUZER Chopper <br> Apocalypse</a>
+            <p class="slider-product__desc">24”, сталь Hi-Ten</p>
+            <p class="slider-product__desc">Венгрия</p>
+            <p class="slider-product__price">75 000 Р</p>
+          </div>
+          <div class="catalog-slider__item slider-product">
+            <div class="slider-product__photo">
+              <img src="img/bikes/bike-05@1x.png" srcset="img/bikes/bike-05@2x.png 2x" alt="Фотография Schwinn Stingray OCC">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title" href="product.html">
+              Schwinn <br> Stingray OCC
+            </a>
+            <p class="slider-product__desc">20”+24”, сталь</p>
+            <p class="slider-product__desc">США</p>
+            <p class="slider-product__price">34 000 Р</p>
+          </div>
+          <div class="catalog-slider__item slider-product">
+            <div class="slider-product__photo">
+              <img src="img/bikes/bike-06@1x.png" srcset="img/bikes/bike-06@2x.png 2x" alt="Фотография Harley Davidson">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title" href="product.html">Harley <br> Davidson</a>
+            <p class="slider-product__desc">20”, сталь</p>
+            <p class="slider-product__desc">Китай</p>
+            <p class="slider-product__price">23 000 Р</p>
+          </div>
+        </div>
+        <div class="catalog-slider__links">
+          <div class="catalog-slider__links-wrapper">
+            <a class="catalog-slider__link" href="catalog.html">Все велосипеды</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="container">
+      <h2 class="visually-hidden">Услуги</h2>
+      <div class="services__wrapper">
+        <picture>
+          <source media="(max-width: 1023px)" srcset="img/services-mobile@1x.jpg 1x, img/services-mobile@2x.jpg 2x">
+          <img class="services__preview" src="img/services-desktop@1x.jpg" srcset="img/services-desktop@2x.jpg 2x" width="462" height="358" alt="Фото мастерской">
+        </picture>
+        <div class="services__promo">
+          <p class="services__promo-title">Мастерская</p>
+          <p class="services__promo-desc">Наши мастера всегда готовы привести в чувство вашего коня, кастомизировать любую модель или просто помочь советом.</p>
+          <p class="services__promo-desc">Возможен выезд по вашему адресу. Для велосипедов, купленных у нас, обслуживание предоставляется бесплатно.</p>
+          <a class="services__promo-link" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="catalog catalog-spares">
+    <div class="container">
+      <h2 class="visually-hidden">Каталог запчастей и аксессуаров</h2>
+      <div class="catalog__wrapper catalog-spares__wrapper">
+        <p class="catalog__title catalog-spares__title">Запчасти и аксессуары</p>
+        <p class="catalog__condition catalog-spares__condition">Всегда большой выбор запчастей и аксессуаров для чоппер-байков.</p>
+        <p class="catalog__condition catalog-spares__condition">Если вы чего-то не нашли в наличии, наши консультанты помогут заказать и доставить товар из любой точки мира.</p>
+      </div>
+      <div class="catalog__block catalog-slider">
+        <div class="catalog-slider__actions">
+          <button class="catalog-slider__prev" type="button">Prev</button>
+          <button class="catalog-slider__next" type="button">Next</button>
+        </div>
+        <div class="catalog-slider__list catalog-spares__list">
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-01@1x.png" srcset="img/spares/product-01@2x.png 2x" alt="Фотография сумка на руль B-Soul">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Сумка на руль B-Soul</a>
+            <p class="slider-product__desc">15х10 х5 cm натуральная кожа</p>
+            <p class="slider-product__price slider-product__price_4x">3200 Р</p>
+          </div>
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-02@1x.png" srcset="img/spares/product-02@2x.png 2x" alt="Фотография грипсы Propalm">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Грипсы <br> Propalm</a>
+            <p class="slider-product__desc">натуральная кожа <br> с фиксаторами</p>
+            <p class="slider-product__price slider-product__price_4x">1800 Р</p>
+          </div>
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-03@1x.png" srcset="img/spares/product-03@2x.png 2x" alt="Фотография Седло Brooks B66 S">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Седло <br>Brooks B66 S</a>
+            <p class="slider-product__desc">натуральная кожа <br> доступно в 3 цветах</p>
+            <p class="slider-product__price slider-product__price_4x">8625 Р</p>
+          </div>
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-04@1x.png" srcset="img/spares/product-04@2x.png 2x" alt="Фотография Колеса Strida 18”">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </use></svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Колеса <br> Strida 18”</a>
+            <p class="slider-product__desc">Покрышки Innove <br> цена за 2 колеса</p>
+            <p class="slider-product__price slider-product__price_4x">6780 Р</p>
+          </div>
+        </div>
+        <div class="catalog-slider__links">
+          <div class="catalog-slider__links-wrapper">
+            <a class="catalog-slider__link catalog-slider__link_4x" href="catalog.html">Перейти в каталог</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div style="display: none">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-basket" viewBox="0 0 22 19"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1a1 1 0 001 1h2.17l3.062 6.579a.892.892 0 00-.005.01l-1.05 2.333A2 2 0 007 13.743h10.502a1 1 0 100-2H7l.67-1.486h9.043l4.226-7.38a1 1 0 10-1.736-.994l-3.65 6.374H8.289L4.446 0H1a1 1 0 00-1 1zm10 16a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z" fill="#9B8869"></path></symbol><symbol id="icon-close" viewBox="0 0 14 14"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.02.636a1 1 0 010 1.414L8.037 7.036l4.985 4.985a1 1 0 11-1.414 1.414L6.62 8.45l-4.914 4.914A1 1 0 01.293 11.95l4.914-4.914L.293 2.122A1 1 0 011.707.707l4.914 4.914L11.607.636a1 1 0 011.414 0z" fill="#9B8869"></path></symbol><symbol id="icon-fb" viewBox="0 0 10 19"><path d="M6.962 3.435h2.36V0H6.547v.012c-3.36.118-4.05 1.98-4.11 3.934H2.43v1.716H.143v3.363H2.43v9.016H5.88V9.025h2.825l.545-3.363H5.88V4.625c0-.66.447-1.19 1.082-1.19z" fill="#6A6454"></path></symbol><symbol id="icon-in" viewBox="0 0 18 18"><path fill-rule="evenodd" clip-rule="evenodd" d="M.286 4a4 4 0 014-4h9.143a4 4 0 014 4v9.143a4 4 0 01-4 4H4.285a4 4 0 01-4-4V4zm14.132 0a1.143 1.143 0 11-2.286 0 1.143 1.143 0 012.286 0zm-3.275 4.562a2.286 2.286 0 11-4.572 0 2.286 2.286 0 014.572 0zm2 0a4.286 4.286 0 11-8.572 0 4.286 4.286 0 018.572 0z" fill="#6A6454"></path></symbol><symbol id="icon-intro" viewBox="0 0 508 146">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-basket-plus" viewBox="0 0 31 19"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2a1 1 0 010-2h3.446l3.842 8.257h7.266l3.65-6.374a1 1 0 111.735.994l-4.226 7.38H7.67L7 11.743h10.502a1 1 0 010 2H7a2 2 0 01-1.823-2.82l1.05-2.334.005-.01L3.171 2H1zm7 17a2 2 0 100-4 2 2 0 000 4zm10-2a2 2 0 11-4 0 2 2 0 014 0zm8-11a1 1 0 112 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2h-2a1 1 0 110-2h2V6z" fill="#F2F5F7"></path></symbol><symbol id="icon-basket" viewBox="0 0 22 19"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1a1 1 0 001 1h2.17l3.062 6.579a.892.892 0 00-.005.01l-1.05 2.333A2 2 0 007 13.743h10.502a1 1 0 100-2H7l.67-1.486h9.043l4.226-7.38a1 1 0 10-1.736-.994l-3.65 6.374H8.289L4.446 0H1a1 1 0 00-1 1zm10 16a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z" fill="#9B8869"></path></symbol><symbol id="icon-close" viewBox="0 0 14 14"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.02.636a1 1 0 010 1.414L8.037 7.036l4.985 4.985a1 1 0 11-1.414 1.414L6.62 8.45l-4.914 4.914A1 1 0 01.293 11.95l4.914-4.914L.293 2.122A1 1 0 011.707.707l4.914 4.914L11.607.636a1 1 0 011.414 0z" fill="#9B8869"></path></symbol><symbol id="icon-fb" viewBox="0 0 10 19"><path d="M6.962 3.435h2.36V0H6.547v.012c-3.36.118-4.05 1.98-4.11 3.934H2.43v1.716H.143v3.363H2.43v9.016H5.88V9.025h2.825l.545-3.363H5.88V4.625c0-.66.447-1.19 1.082-1.19z" fill="#6A6454"></path></symbol><symbol id="icon-in" viewBox="0 0 18 18"><path fill-rule="evenodd" clip-rule="evenodd" d="M.286 4a4 4 0 014-4h9.143a4 4 0 014 4v9.143a4 4 0 01-4 4H4.285a4 4 0 01-4-4V4zm14.132 0a1.143 1.143 0 11-2.286 0 1.143 1.143 0 012.286 0zm-3.275 4.562a2.286 2.286 0 11-4.572 0 2.286 2.286 0 014.572 0zm2 0a4.286 4.286 0 11-8.572 0 4.286 4.286 0 018.572 0z" fill="#6A6454"></path></symbol><symbol id="icon-intro" viewBox="0 0 508 146">
 <path d="M20.8942 64.219C29.7366 64.219 37.1353 61.7838 37.1353 51.4113V40.7683C37.1353 34.9056 34.3382 31.6585 30.1877 30.035C33.4359 28.6821 35.2405 25.2547 35.2405 21.7371V12.6273C35.2405 3.33722 29.6463 1.08234 21.2551 1.08234H1.04394V3.69801L4.47262 6.04308V58.8975L0.412344 61.6034V64.219H20.8942ZM27.7516 51.4113C27.7516 56.6426 26.2177 58.8073 20.8942 58.8073H11.6909V58.3563C13.2248 57.8152 13.5857 57.0034 13.5857 55.3799V33.0115H20.0821C25.6763 33.0115 27.7516 35.5369 27.7516 40.7683V51.4113ZM25.8568 21.7371C25.8568 24.9841 24.0522 28.5017 20.2626 28.5017H13.5857V6.31367H20.2626C23.962 6.31367 25.8568 9.19992 25.8568 12.6273V21.7371Z" fill="#BAA480"></path>
 <path d="M82.9734 50.0584H79.0034L75.9356 58.7171C70.7926 58.7171 65.7398 58.7171 60.5968 58.7171V58.2662C62.1307 57.725 62.4916 56.9132 62.4916 55.4701C62.4916 48.7957 62.4916 42.2114 62.4916 35.5369H71.1535L73.4995 40.3173H76.2063C76.2063 35.8977 76.2063 29.4939 76.2063 25.0743H73.4995L71.1535 30.035H62.4916C62.4916 22.0978 62.4916 14.1607 62.4916 6.31367H74.7627L77.2891 15.1528H81.8005V0.992146C70.7926 0.992146 60.687 0.992146 49.6792 0.992146V3.33723L53.1078 5.6823C53.1078 23.3606 53.1078 41.1291 53.1078 58.8975L49.0476 61.6034V64.219C60.4164 64.219 71.6949 64.219 82.9734 64.219V50.0584Z" fill="#BAA480"></path>
 <path d="M120.868 6.40386V59.4387L116.898 61.6034V64.219H134.041V61.6034L129.981 59.4387V5.95289L133.41 3.60781V0.992146H99.0327V3.60781L102.822 6.31367L97.6793 54.4779C97.1379 60.3406 94.1604 60.2505 91.1828 59.7995L90.7317 64.219C98.5816 66.4739 103.905 63.9485 104.627 55.1995L109.589 6.40386H120.868Z" fill="#BAA480"></path>
