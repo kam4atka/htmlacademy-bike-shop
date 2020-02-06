@@ -1,0 +1,25 @@
+.catalog-spares__wrapper {
+  margin: 0 0 65px 0;
+}
+
+@media (max-width: $width-tablet) {
+  .catalog-spares__wrapper {
+    margin: 0 0 30px 0;
+  }
+
+  .catalog-spares {
+    padding: 50px 0 27px 0;
+  }
+
+  .catalog-spares__title {
+    margin: 0 0 12px 0;
+  }
+
+  .catalog-spares__condition {
+    letter-spacing: 1.5px;
+  }
+
+  .catalog-spares__list {
+    margin-bottom: 22px;
+  }
+}

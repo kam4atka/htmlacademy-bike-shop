@@ -13,9 +13,9 @@
   <link rel="preload" href="fonts/Roboto.woff" as="font" crossorigin="anonymous">
 </head>
 <body>
-  <header class="header">
+  <header class="header header_main">
     <div class="container">
-      <div class="header-nav">
+      <div class="header-nav header-nav_main">
         <a class="header-nav__logo">
           <svg width="184" height="29">
             <use xlink:href="#icon-logo">
@@ -42,7 +42,7 @@
           <div class="nav-main__body">
             <ul class="nav-main__list">
               <li>
-                <a href="#">Велосипеды</a>
+                <a href="catalog.html">Велосипеды</a>
               </li>
               <li>
                 <a href="#">Аксессуары</a>
@@ -104,11 +104,11 @@
           </ul>
         </div>
       </div>
-      <div class="header-intro">
+      <div class="header-intro intro">
         <svg class="intro__icon" width="508" height="146">
           <use xlink:href="#icon-intro">
         </svg>
-        <a class="intro__link" href="#">В магазин</a>
+        <a class="intro__link" href="catalog.html">В магазин</a>
         <ul class="intro__social">
           <li class="intro__social-item">
             <a class="intro__social-link" href="#">
@@ -138,6 +138,172 @@
       </div>
     </div>
   </header>
+  <h1 class="visually-hidden">Главная страницы магазина</h1>
+  <section class="catalog">
+    <div class="container">
+      <h2 class="visually-hidden">Каталог велосипедов</h2>
+      <div class="catalog__wrapper">
+        <p class="catalog__title">У нас Более 200 моделей прогулочных велосипедов для настоящих мужчин</p>
+        <p class="catalog__condition">Бесплатный выездной тест-драйв на все модели. Система рассрочки 0-0-5. Для членов клуба бесплатно предоставляется выездной сервис, зимнее хранение и куча привелегий от партнеров.</p>
+      </div>
+      <div class="catalog__block catalog-slider">
+        <div class="catalog-slider__actions">
+          <button class="catalog-slider__prev" type="button">Prev</button>
+          <button class="catalog-slider__next" type="button">Next</button>
+        </div>
+        <div class="catalog-slider__list">
+          <div class="catalog-slider__item slider-product">
+            <div class="slider-product__photo">
+              <img src="img/bikes/bike-04@1x.png" srcset="img/bikes/bike-04@2x.png 2x" alt="Фотография NEUZER Chopper Apocalypse">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title" href="product.html">NEUZER Chopper <br> Apocalypse</a>
+            <p class="slider-product__desc">24”, сталь Hi-Ten</p>
+            <p class="slider-product__desc">Венгрия</p>
+            <p class="slider-product__price">75 000 Р</p>
+          </div>
+          <div class="catalog-slider__item slider-product">
+            <div class="slider-product__photo">
+              <img src="img/bikes/bike-05@1x.png"  srcset="img/bikes/bike-05@2x.png 2x" alt="Фотография Schwinn Stingray OCC">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title" href="product.html">
+              Schwinn <br> Stingray OCC
+            </a>
+            <p class="slider-product__desc">20”+24”, сталь</p>
+            <p class="slider-product__desc">США</p>
+            <p class="slider-product__price">34 000 Р</p>
+          </div>
+          <div class="catalog-slider__item slider-product">
+            <div class="slider-product__photo">
+              <img src="img/bikes/bike-06@1x.png" srcset="img/bikes/bike-06@2x.png 2x" alt="Фотография Harley Davidson">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title" href="product.html">Harley <br> Davidson</a>
+            <p class="slider-product__desc">20”, сталь</p>
+            <p class="slider-product__desc">Китай</p>
+            <p class="slider-product__price">23 000 Р</p>
+          </div>
+        </div>
+        <div class="catalog-slider__links">
+          <div class="catalog-slider__links-wrapper">
+            <a class="catalog-slider__link" href="catalog.html">Все велосипеды</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="container">
+      <h2 class="visually-hidden">Услуги</h2>
+      <div class="services__wrapper">
+        <picture>
+          <source media="(max-width: 1023px)" srcset="img/services-mobile@1x.jpg 1x, img/services-mobile@2x.jpg 2x">
+          <img class="services__preview" src="img/services-desktop@1x.jpg" srcset="img/services-desktop@2x.jpg 2x" width="462" height="358" alt="Фото мастерской">
+        </picture>
+        <div class="services__promo">
+          <p class="services__promo-title">Мастерская</p>
+          <p class="services__promo-desc">Наши мастера всегда готовы привести в чувство вашего коня, кастомизировать любую модель или просто помочь советом.</p>
+          <p class="services__promo-desc">Возможен выезд по вашему адресу. Для велосипедов, купленных у нас, обслуживание предоставляется бесплатно.</p>
+          <a class="services__promo-link" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="catalog catalog-spares">
+    <div class="container">
+      <h2 class="visually-hidden">Каталог запчастей и аксессуаров</h2>
+      <div class="catalog__wrapper catalog-spares__wrapper">
+        <p class="catalog__title catalog-spares__title">Запчасти и аксессуары</p>
+        <p class="catalog__condition catalog-spares__condition">Всегда большой выбор запчастей и аксессуаров для чоппер-байков.</p>
+        <p class="catalog__condition catalog-spares__condition">Если вы чего-то не нашли в наличии, наши консультанты помогут заказать и доставить товар из любой точки мира.</p>
+      </div>
+      <div class="catalog__block catalog-slider">
+        <div class="catalog-slider__actions">
+          <button class="catalog-slider__prev" type="button">Prev</button>
+          <button class="catalog-slider__next" type="button">Next</button>
+        </div>
+        <div class="catalog-slider__list catalog-spares__list">
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-01@1x.png" srcset="img/spares/product-01@2x.png 2x" alt="Фотография сумка на руль B-Soul">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Сумка на руль B-Soul</a>
+            <p class="slider-product__desc">15х10 х5 cm натуральная кожа</p>
+            <p class="slider-product__price slider-product__price_4x">3200 Р</p>
+          </div>
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-02@1x.png" srcset="img/spares/product-02@2x.png 2x" alt="Фотография грипсы Propalm">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Грипсы <br /> Propalm</a>
+            <p class="slider-product__desc">натуральная кожа <br> с фиксаторами</p>
+            <p class="slider-product__price slider-product__price_4x">1800 Р</p>
+          </div>
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-03@1x.png"  srcset="img/spares/product-03@2x.png 2x" alt="Фотография Седло Brooks B66 S">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Седло <br />Brooks B66 S</a>
+            <p class="slider-product__desc">натуральная кожа <br> доступно в 3 цветах</p>
+            <p class="slider-product__price slider-product__price_4x">8625 Р</p>
+          </div>
+          <div class="catalog-slider__item catalog-slider__item_4x slider-product">
+            <div class="slider-product__photo">
+              <img src="img/spares/product-04@1x.png" srcset="img/spares/product-04@2x.png 2x" alt="Фотография Колеса Strida 18”">
+            </div>
+            <a class="slider-product__basket" href="#">
+              <svg width="31" height="19">
+                <use xlink:href="#icon-basket-plus">
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+            <a class="slider-product__title slider-product__title_4x" href="product.html">Колеса <br> Strida 18”</a>
+            <p class="slider-product__desc">Покрышки Innove <br> цена за 2 колеса</p>
+            <p class="slider-product__price slider-product__price_4x">6780 Р</p>
+          </div>
+        </div>
+        <div class="catalog-slider__links">
+          <div class="catalog-slider__links-wrapper">
+            <a class="catalog-slider__link catalog-slider__link_4x" href="catalog.html">Перейти в каталог</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div style="display: none">
     <include src="build/img/sprite_auto.svg"></include>
   </div>

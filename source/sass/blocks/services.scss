@@ -1,0 +1,133 @@
+.services {
+  background-image: url("../img/bg-services@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-bg-intro;
+  background-position: center;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .services {
+    background-image: url("../img/bg-services@2x.png");
+  }
+}
+
+.services__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 118px 170px 95px 170px;
+}
+
+.services__preview {
+  width: 463px;
+  max-width: none;
+  height: 358px;
+  margin-right: 57px;
+}
+
+.services__promo-title {
+  margin: 0 0 13px 0;
+  padding: 0;
+  font-family: $font-secondary;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+}
+
+.services__promo-desc {
+  width: 92%;
+  margin: 0 0 14px 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 1.25px;
+
+  &:last-of-type {
+    margin: 0 0 45px 0;
+  }
+}
+
+.services__promo-link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 14px 65px;
+  font-family: $font-secondary;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-text-light;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid $color-text-light;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-text-hover;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .services__wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px 0 15px;
+  }
+
+  .services__wrapper picture {
+    order: 1;
+  }
+
+  .services__preview {
+    position: relative;
+    top: 25px;
+    width: 290px;
+    height: 300px;
+    margin: 0;
+  }
+
+  .services__promo {
+    width: 80%;
+    text-align: center;
+  }
+
+  .services__promo-title {
+    text-align: center;
+  }
+
+  .services__promo-desc {
+    text-align: center;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .services__wrapper {
+    padding: 27px 15px 0 15px;
+  }
+
+  .services__promo {
+    width: 90%;
+  }
+
+  .services__promo-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .services__promo-desc {
+    width: 100%;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+
+    &:last-of-type {
+      margin: 0 0 5px 0;
+    }
+  }
+
+  .services__promo-link {
+    display: none;
+  }
+}
