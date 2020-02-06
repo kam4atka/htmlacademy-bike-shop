@@ -2,6 +2,8 @@
 
 (function () {
   var initPage = function () {
+    var TABLET_SIZE = 767;
+
     var nojs = document.querySelector('.nojs');
     nojs.classList.remove('nojs');
 
@@ -21,8 +23,10 @@
       }
     };
 
-    var nav = document.querySelector('.nav-main');
-    nav.addEventListener('click', navToggleHandler);
+    if (document.body.offsetWidth <= TABLET_SIZE) {
+      var nav = document.querySelector('.nav-main');
+      nav.addEventListener('click', navToggleHandler);
+    }
   };
   window.addEventListener('load', initPage);
 })();

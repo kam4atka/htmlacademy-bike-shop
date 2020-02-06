@@ -1,25 +1,36 @@
 .header {
-  background-image: url("../img/bg-intro@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $color-bg-intro;
+  background-color: $color-bg-dark;
+
+  &_main {
+    background-image: url("../img/bg-intro@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $color-bg-intro;
+    background-position: center;
+  }
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-intro@2x.jpg");
+    &_main {
+      background-image: url("../img/bg-intro@2x.jpg");
+    }
   }
 }
 
 @media (max-width: $width-desktop) {
   .header {
-    background-position: 60% 0;
+    &_main {
+      background-position: 60% 0;
+    }
   }
 }
 
 @media (max-width: $width-tablet) {
   .header {
-    background-size: auto;
-    background-position: 34% 8%;
+    &_main {
+      background-size: cover;
+      background-position: 34% 70px;
+    }
   }
 }

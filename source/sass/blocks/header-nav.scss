@@ -13,9 +13,19 @@
 
 @media (max-width: $width-tablet) {
   .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     flex-wrap: wrap;
-    margin: 15px;
-    padding: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    z-index: 5;
+    background-color: $color-bg-dark;
+
+    &_main {
+      background-color: $color-bg-intro;
+    }
   }
 
   .header-nav__logo {
