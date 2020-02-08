@@ -5,13 +5,13 @@
 
 @media (max-width: $width-desktop) {
   .container {
-    min-width: $width-tablet;
+    max-width: $width-tablet;
   }
 }
 
 @media (max-width: $width-tablet) {
   .container {
-    min-width: $width-mobile;
+    max-width: $width-mobile;
     width: 100%;
   }
 }

@@ -48,6 +48,10 @@
   }
 }
 
+.intro__social-link svg {
+  fill: $color-icon-social;
+}
+
 @media (max-width: $width-tablet) {
   .intro__icon {
     width: 246px;
