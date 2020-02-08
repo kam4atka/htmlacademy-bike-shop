@@ -1,0 +1,76 @@
+.club__wrapper {
+  padding: 125px 115px 95px 123px;
+}
+
+.club__preview {
+  width: 529px;
+  max-width: none;
+  height: 358px;
+  margin-right: 57px;
+}
+
+.club__promo-title {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.club__promo-desc {
+  width: 82%;
+  margin: 0 0 10px 0;
+  padding: 0;
+
+  &:last-of-type {
+    margin: 0 0 80px 0;
+  }
+}
+
+.club__promo-link {
+  padding: 14px 71px;
+}
+
+@media (max-width: $width-desktop + 200) {
+  .club__preview {
+    width: 290px;
+    height: 300px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .club__wrapper {
+    padding: 31px 15px 25px 15px;
+  }
+
+  .club__preview {
+    margin: 0;
+  }
+
+  .club__promo {
+    text-align: center;
+  }
+
+  .club__promo-title {
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  .club__promo-desc {
+    width: 80%;
+    margin: 0 auto 12px auto;
+
+    &:last-of-type {
+      margin: 0 auto 35px auto;
+    }
+  }
+
+  .club__promo-link {
+    margin: 0 0 30px 0;
+    padding: 9px 48px;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .club__wrapper {
+    padding: 31px 15px 20px 15px;
+  }
+}
