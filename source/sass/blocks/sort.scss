@@ -1,0 +1,189 @@
+.sort {
+  margin: 0 41px 0 53px;
+}
+
+.sort fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.sort svg {
+  fill: $color-text-dark;
+}
+
+.sort__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 1px solid $color-text-dark;
+  border-bottom: 1px solid $color-text-dark;
+}
+
+.sort__toggle {
+  display: none;
+}
+
+.sort__clear {
+  margin: 0 10.5% 0 0;
+  padding: 0;
+  font-family: $font-secondary;
+  letter-spacing: 1px;
+  color: $color-text-dark;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-text-hover;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $color-text-hover;
+  }
+}
+
+.sort select,
+.sort label {
+  font-family: $font-secondary;
+  letter-spacing: 1px;
+  color: $color-text-dark;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-text-hover;
+  }
+}
+
+.sort option {
+  background-color: $color-bg-dark;
+}
+
+.sort label:hover {
+  opacity: 0.6;
+}
+
+.sort__count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+  margin: 0 0 0 auto;
+}
+
+.sort__count-title {
+  margin: 0 4% 0 0;
+  padding: 0;
+  font-family: $font-secondary;
+  letter-spacing: 1px;
+  color: $color-text-dark;
+  background-color: transparent;
+  border: none;
+}
+
+.sort__count label {
+  position: relative;
+  margin: 0 8px 0 0;
+  padding: 0 10px 0 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 14px;
+    background-color: $color-text-dark;
+  }
+
+  &:last-of-type {
+    margin: 0;
+    padding: 0;
+    border-right: none;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.sort input:checked + label {
+  color: $color-text-hover;
+}
+
+.sort input:checked + label > svg {
+  fill: $color-text-hover;
+
+  &:hover,
+  &:focus {
+    fill: $color-text-hover;
+  }
+}
+
+.sort__view {
+  margin: 0 0 0 3%;
+}
+
+.sort__view label {
+  margin-right: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .sort__clear {
+    margin: 0 6% 0 0;
+  }
+
+  .sort__count {
+    width: 35%;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .sort {
+    margin: 0 15px;
+    padding: 58px 0 0 0;
+
+    select {
+      display: none;
+    }
+  }
+
+  .sort__wrapper {
+    padding: 10px 0 7px 0;
+    justify-content: space-between;
+  }
+
+  .sort__toggle {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: $font-secondary;
+    letter-spacing: 0.5px;
+    color: $color-text-dark;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text-hover;
+    }
+  }
+
+  .sort__clear,
+  .sort__count {
+    display: none;
+  }
+}

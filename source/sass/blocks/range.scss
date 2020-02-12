@@ -1,0 +1,54 @@
+.range {
+  margin: 0 0 18px 0;
+}
+
+.range__view {
+  position: relative;
+  height: 1px;
+  width: 180px;
+  background-color: $color-text-dark;
+}
+
+.range__roller {
+  &_min,
+  &_max {
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: $color-text-title;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &_min {
+    left: 23px;
+  }
+
+  &_max {
+    left: 114px;
+  }
+}
+
+.range__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 18px 0;
+
+  input {
+    width: 75px;
+    padding: 6px 0;
+    font-size: 14px;
+    color: $color-text-dark;
+    text-align: center;
+    background-color: $color-bg-dark;
+    border: 1px solid $color-text-dark;
+
+    &:hover,
+    &:focus {
+      color: $color-text-hover;
+    }
+  }
+}

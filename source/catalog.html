@@ -107,11 +107,492 @@
     </div>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">Каталог велосипедов</h1>
+    <div class="container">
+      <h1 class="visually-hidden">Каталог велосипедов</h1>
+      <section class="sort">
+        <h2 class="visually-hidden">Блок сортировки списка каталога</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <fieldset>
+              <legend class="visually-hidden">Форма сортировки каталога</legend>
+              <div class="sort__wrapper">
+                <button class="sort__toggle" type="button">Фильтры (3)</button>
+                <button class="sort__clear" type="reset">
+                  <span>Сбросить фильтры</span>
+                  <svg width="12" height="12">
+                    <use xlink:href="#icon-close">
+                  </svg>
+                </button>
+                <select name="sorting" id="sorting">
+                  <option value="popular" selected>По популярности</option>
+                  <option value="priceup">По убыванию</option>
+                  <option value="pricedown">По возврастанию</option>
+                </select>
+                <div class="sort__count">
+                  <p class="sort__count-title">Показывать по</p>
+                  <input class="visually-hidden" type="radio" name="sort-count" value="12" id="count-12" checked>
+                  <label for="count-12">12</label>
+                  <input class="visually-hidden" type="radio" name="sort-count" value="24" id="count-24">
+                  <label for="count-24">24</label>
+                  <input class="visually-hidden" type="radio" name="sort-count" value="all" id="count-all">
+                  <label for="count-all">Все</label>
+                </div>
+                <div class="sort__view">
+                  <input class="visually-hidden" type="radio" name="sort-view" value="block" id="view-block" checked>
+                  <label for="view-block">
+                    <svg width="11" height="11">
+                      <use xlink:href="#icon-block">
+                    </svg>
+                    <span class="visually-hidden">Блоки</span>
+                  </label>
+                  <input class="visually-hidden" type="radio" name="sort-view" value="list" id="view-list">
+                  <label for="view-list">
+                    <svg width="12" height="11">
+                      <use xlink:href="#icon-list">
+                    </svg>
+                    <span class="visually-hidden">Список</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+      </section>
+      <div class="main__wrapper">
+        <section class="filter filter_mobile">
+          <h2 class="visually-hidden">Блок фильтров списка каталога</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <fieldset>
+              <legend class="visually-hidden">Форма фильтрации списка каталога</legend>
+              <div class="filter__head">
+                <button class="filter__clear" type="reset">
+                  <span>Сбросить фильтры (3)</span>
+                </button>
+                <button class="filter__close" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+              </div>
+              <div class="filter__wrapper">
+                <select name="sorting" id="sorting-filter">
+                  <option value="popular" selected>По популярности</option>
+                  <option value="priceup">По убыванию</option>
+                  <option value="pricedown">По возврастанию</option>
+                </select>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Цена</legend>
+                    <div class="range">
+                      <div class="range__price">
+                        <input type="number" name="range-min" id="range-min" value="28000">
+                        <input type="number" name="range-max" id="range-max" value="180000">
+                      </div>
+                      <div class="range__view">
+                        <span class="range__roller range__roller_min"></span>
+                        <span class="range__roller range__roller_max"></span>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Электровелосипед</legend>
+                    <div class="electric">
+                      <div class="filter__block-head">
+                        <h3>Электровелосипед</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="electric-true" name="electric-true">
+                        <label for="electric-true">Да</label>
+                        <input class="visually-hidden" type="checkbox" id="electric-false" name="electric-false">
+                        <label for="electric-false">Нет</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Производитель</legend>
+                    <div class="producer">
+                      <div class="filter__block-head">
+                        <h3>Производитель</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="producer-one" name="producer-one">
+                        <label for="producer-one">One</label>
+                        <input class="visually-hidden" type="checkbox" id="producer-two" name="producer-two">
+                        <label for="producer-two">Two</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Материал рамы</legend>
+                    <div class="material">
+                      <div class="filter__block-head">
+                        <h3>Материал рамы</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="material-steel" name="material-steel" checked>
+                        <label for="material-steel">Сталь</label>
+                        <input class="visually-hidden" type="checkbox" id="material-carboon" name="material-carboon">
+                        <label for="material-carboon">Карбон</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Цвет</legend>
+                    <div class="color">
+                      <div class="filter__block-head">
+                        <h3>Цвет</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="color-black" name="color-black">
+                        <label for="color-black">Черный</label>
+                        <input class="visually-hidden" type="checkbox" id="color-brown" name="color-brown">
+                        <label for="color-brown">Коричневый</label>
+                        <input class="visually-hidden" type="checkbox" id="color-red" name="color-red">
+                        <label for="color-red">Красный</label>
+                        <input class="visually-hidden" type="checkbox" id="color-blue" name="color-blue">
+                        <label for="color-blue">Голубой</label>
+                        <input class="visually-hidden" type="checkbox" id="color-khaki" name="color-khaki">
+                        <label for="color-khaki">Хаки</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Размер</legend>
+                    <div class="size">
+                      <div class="filter__block-head">
+                        <h3>Размер</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="size-one" name="size-one">
+                        <label for="size-one">One</label>
+                        <input class="visually-hidden" type="checkbox" id="size-two" name="size-two">
+                        <label for="size-two">Two</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Колеса</legend>
+                    <div class="wheels">
+                      <div class="filter__block-head">
+                        <h3>Колеса</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="wheels-20" name="wheels-20">
+                        <label for="wheels-20">20”</label>
+                        <input class="visually-hidden" type="checkbox" id="wheels-22" name="wheels-22">
+                        <label for="wheels-22">22”</label>
+                        <input class="visually-hidden" type="checkbox" id="wheels-24" name="wheels-24">
+                        <label for="wheels-24">24”</label>
+                        <input class="visually-hidden" type="checkbox" id="wheels-26" name="wheels-26">
+                        <label for="wheels-26">26”</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__block">
+                  <fieldset>
+                    <legend class="visually-hidden">Кол-во скоростей</legend>
+                    <div class="speeds">
+                      <div class="filter__block-head">
+                        <h3>Кол-во скоростей</h3>
+                        <button class="filter__block-toggle" type="button">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-minus">
+                          </svg>
+                          <span class="visually-hidden">Закрыть</span>
+                        </button>
+                      </div>
+                      <div class="filter__block-list">
+                        <input class="visually-hidden" type="checkbox" id="speed-one" name="speed-one">
+                        <label for="speed-one">One</label>
+                        <input class="visually-hidden" type="checkbox" id="speed-two" name="speed-two">
+                        <label for="speed-two">Two</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+        <div class="show">
+          <h2 class="visually-hidden">Каталог велосипедов</h2>
+          <div class="show__list">
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-04@1x.png" srcset="img/bikes/bike-04@2x.png 2x" alt="Фотография NEUZER Chopper Apocalypse">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">NEUZER Chopper <br> Apocalypse</a>
+              <p class="show__item-desc product__desc">24”, сталь Hi-Ten</p>
+              <p class="product__desc">Венгрия</p>
+              <p class="product__price">75 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-05@1x.png"  srcset="img/bikes/bike-05@2x.png 2x" alt="Фотография Schwinn Stingray OCC">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">Schwinn <br> Stingray OCC</a>
+              <p class="product__desc">20”+24”, сталь</p>
+              <p class="product__desc">США</p>
+              <p class="product__price">34 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-06@1x.png" srcset="img/bikes/bike-06@2x.png 2x" alt="Фотография Harley Davidson">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">Harley <br> Davidson</a>
+              <p class="product__desc">20”, сталь</p>
+              <p class="product__desc">Китай</p>
+              <p class="product__price">23 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-01@1x.png" srcset="img/bikes/bike-01@2x.png 2x" alt="Фотография Micargi Cyclone Electric">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">Micargi Cyclone <br> Electric</a>
+              <p class="product__desc">26”, 500W, 5 скоростей, сталь</p>
+              <p class="product__desc">США</p>
+              <p class="product__price">154 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-02@1x.png"  srcset="img/bikes/bike-02@2x.png 2x" alt="Фотография X-Front Snowmobile">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">X-Front <br> Snowmobile</a>
+              <p class="product__desc">24”, сталь</p>
+              <p class="product__desc">Китай</p>
+              <p class="product__price">42 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-03@1x.png" srcset="img/bikes/bike-03@2x.png 2x" alt="Фотография 2Fast4You Chopper">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">2Fast4You <br>Chopper</a>
+              <p class="product__desc">24”, сталь</p>
+              <p class="product__desc">Венгрия</p>
+              <p class="product__price">38 000 Р</p>
+            </div>
+            <div class="show__sep"></div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-07@1x.png" srcset="img/bikes/bike-07@2x.png 2x" alt="Фотография NEUZER Chopper Apocalypse">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">NEUZER Chopper <br> Apocalypse</a>
+              <p class="product__desc">24”, сталь Hi-Ten</p>
+              <p class="product__desc">Венгрия</p>
+              <p class="product__price">75 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-08@1x.png"  srcset="img/bikes/bike-08@2x.png 2x" alt="Фотография Schwinn Stingray OCC">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">Schwinn <br> Stingray OCC</a>
+              <p class="product__desc">20”+24”, сталь</p>
+              <p class="product__desc">США</p>
+              <p class="product__price">34 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-09@1x.png" srcset="img/bikes/bike-09@2x.png 2x" alt="Фотография Harley Davidson">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">Harley <br> Davidson</a>
+              <p class="product__desc">20”, сталь</p>
+              <p class="product__desc">Китай</p>
+              <p class="product__price">23 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-10@1x.png" srcset="img/bikes/bike-10@2x.png 2x" alt="Фотография Micargi Cyclone Electric">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">Micargi Cyclone <br> Electric</a>
+              <p class="product__desc">26”, 500W, 5 скоростей, сталь</p>
+              <p class="product__desc">США</p>
+              <p class="product__price">154 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-11@1x.png"  srcset="img/bikes/bike-11@2x.png 2x" alt="Фотография X-Front Snowmobile">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">X-Front <br> Snowmobile</a>
+              <p class="product__desc">24”, сталь</p>
+              <p class="product__desc">Китай</p>
+              <p class="product__price">42 000 Р</p>
+            </div>
+            <div class="show__item product">
+              <div class="product__photo">
+                <img src="img/bikes/bike-09@1x.png" srcset="img/bikes/bike-09@2x.png 2x" alt="Фотография 2Fast4You Chopper">
+              </div>
+              <a class="product__basket" href="#">
+                <svg width="31" height="19">
+                  <use xlink:href="#icon-basket-plus">
+                </svg>
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+              <a class="product__title" href="product.html">2Fast4You <br> Chopper</a>
+              <p class="product__desc">24”, сталь</p>
+              <p class="product__desc">Венгрия</p>
+              <p class="product__price">38 000 Р</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item pagination__item_prev">
+            <a href="#">
+              <svg width="12" height="12">
+                <use xlink:href="#icon-open">
+              </svg>
+              <span class="visually-hidden">Предыдущая</span>
+            </a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a>...</a>
+          </li>
+          <li class="pagination__item pagination__item_mobile">
+            <a href="#">24</a>
+          </li>
+          <li class="pagination__item pagination__item_mobile">
+            <a href="#">25</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">26</a>
+          </li>
+          <li class="pagination__item pagination__item_next">
+            <a href="#">
+              <svg width="12" height="12">
+                <use xlink:href="#icon-open">
+              </svg>
+              <span class="visually-hidden">Следующая</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </main>
   <footer class="footer">
-    <section class="footer-nav">
-      <div class="container">
+    <div class="container">
+      <section class="footer-nav">
+        <h2 class="visually-hidden">Навигация по сайту</h2>
         <ul class="footer-nav__list">
           <li>
             <a href="catalog.html">Велосипеды</a>
@@ -138,10 +619,9 @@
             <a href="#">Вступление в клуб</a>
           </li>
         </ul>
-      </div>
-    </section>
-    <section class="footer-links">
-      <div class="container">
+      </section>
+      <section class="footer-links">
+        <h2 class="visually-hidden">Ссылки на внешние ресурсы</h2>
         <div class="footer-links__wrapper">
           <ul class="footer-links__social">
             <li class="footer-links__social-item">
@@ -179,8 +659,8 @@
             <a href="#">Политика конфиденциальности</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </footer>
   <div style="display: none">
     <include src="build/img/sprite_auto.svg"></include>
