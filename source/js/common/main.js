@@ -46,15 +46,21 @@
       }
     };
 
-    var filterOpenHandler = function (ftEvt) {
+    var filterOpenHandler = function (foEvt) {
       var filter = document.querySelector('.filter');
       if (filter.classList.contains('filter_mobile')) {
-        ftEvt.preventDefault();
+        foEvt.preventDefault();
         filter.classList.remove('filter_mobile');
         bodyScroll('off');
         filter.addEventListener('click', filterCloseHandler);
       }
+    };
 
+    var filterToggleHandler = function (ftEvt) {
+      ftEvt.preventDefault();
+      // console.log(ftEvt.currentTarget);
+      var item = ftEvt.currentTarget;
+      item.classList.toggle('filter__block_hidden');
     };
 
     if (document.body.offsetWidth <= TABLET_SIZE) {
@@ -62,6 +68,11 @@
       nav.addEventListener('click', navToggleHandler);
       var filterOpen = document.querySelector('.sort__toggle');
       filterOpen.addEventListener('click', filterOpenHandler);
+    }
+
+    var filterBlocks = document.querySelectorAll('.filter__block');
+    for (var i = 0; i < filterBlocks.length; i++) {
+      filterBlocks[i].addEventListener('click', filterToggleHandler);
     }
   };
   window.addEventListener('load', initPage);
