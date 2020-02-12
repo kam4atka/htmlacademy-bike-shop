@@ -1,5 +1,5 @@
 .footer-links {
-  margin: 32px 122px;
+  margin: 32px 122px 46px 122px;
 }
 
 .footer-links__wrapper {
@@ -11,7 +11,7 @@
 
 .footer-links__social {
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: row;
   align-items: center;
   margin: 0 auto 0 0;
   padding: 0;
