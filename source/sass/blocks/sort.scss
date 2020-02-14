@@ -1,15 +1,51 @@
 .sort {
   margin: 0 41px 0 53px;
-}
 
-.sort fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 
-.sort svg {
-  fill: $color-text-dark;
+  svg {
+    fill: $color-text-dark;
+  }
+
+  select,
+  label {
+    font-family: $font-secondary;
+    letter-spacing: 1px;
+    color: $color-text-dark;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text-hover;
+    }
+  }
+
+  label:hover {
+    opacity: 0.6;
+  }
+
+  option {
+    background-color: $color-bg-dark;
+  }
+
+  input:checked + label {
+    color: $color-text-hover;
+  }
+
+  input:checked + label > svg {
+    fill: $color-text-hover;
+
+    &:hover,
+    &:focus {
+      fill: $color-text-hover;
+    }
+  }
 }
 
 .sort__wrapper {
@@ -47,29 +83,6 @@
   }
 }
 
-.sort select,
-.sort label {
-  font-family: $font-secondary;
-  letter-spacing: 1px;
-  color: $color-text-dark;
-  background-color: transparent;
-  border: none;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    color: $color-text-hover;
-  }
-}
-
-.sort option {
-  background-color: $color-bg-dark;
-}
-
-.sort label:hover {
-  opacity: 0.6;
-}
-
 .sort__count {
   display: flex;
   flex-direction: row;
@@ -77,6 +90,32 @@
   align-items: center;
   width: 25%;
   margin: 0 0 0 auto;
+
+  label {
+    position: relative;
+    margin: 0 8px 0 0;
+    padding: 0 10px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 14px;
+      background-color: $color-text-dark;
+    }
+
+    &:last-of-type {
+      margin: 0;
+      padding: 0;
+      border-right: none;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
 }
 
 .sort__count-title {
@@ -89,54 +128,15 @@
   border: none;
 }
 
-.sort__count label {
-  position: relative;
-  margin: 0 8px 0 0;
-  padding: 0 10px 0 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 14px;
-    background-color: $color-text-dark;
-  }
-
-  &:last-of-type {
-    margin: 0;
-    padding: 0;
-    border-right: none;
-
-    &::after {
-      content: none;
-    }
-  }
-}
-
-.sort input:checked + label {
-  color: $color-text-hover;
-}
-
-.sort input:checked + label > svg {
-  fill: $color-text-hover;
-
-  &:hover,
-  &:focus {
-    fill: $color-text-hover;
-  }
-}
-
 .sort__view {
   margin: 0 0 0 3%;
-}
 
-.sort__view label {
-  margin-right: 10px;
+  label {
+    margin-right: 10px;
 
-  &:last-of-type {
-    margin-right: 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 

@@ -185,15 +185,7 @@
 
     &_mobile {
       display: none;
-      position: relative;
-      width: 100%;
     }
-  }
-
-  .nojs .filter {
-    display: block;
-    top: unset;
-    left: unset;
   }
 
   .filter__head {
@@ -224,16 +216,29 @@
     }
   }
 
-  .nojs .filter__close {
-    display: none;
-  }
-
   .filter__wrapper {
     width: 66%;
     overflow-y: auto;
   }
 
-  .nojs .filter__wrapper {
-    width: 100%;
+  .nojs {
+    .filter {
+      position: static;
+      display: block;
+      top: unset;
+      left: unset;
+    }
+
+    .filter__close {
+      display: none;
+    }
+
+    .filter__wrapper {
+      width: 100%;
+    }
+
+    .filter__block-toggle {
+      display: none;
+    }
   }
 }
