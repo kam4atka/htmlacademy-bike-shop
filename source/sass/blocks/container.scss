@@ -11,7 +11,7 @@
 
 @media (max-width: $width-tablet) {
   .container {
-    min-width: $width-mobile;
+    max-width: $width-mobile;
     width: 100%;
   }
 }
