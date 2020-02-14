@@ -1,0 +1,263 @@
+.item {
+  margin: 0 0 105px 0;
+}
+
+.item__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 56px 6px;
+}
+
+.item__info {
+  width: 56%;
+}
+
+.item__preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 518px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 56%;
+    width: 354px;
+    height: 424px;
+    border: 6px solid #f0ede8;
+    transform: translateX(-50%);
+  }
+}
+
+.item__photo {
+  position: relative;
+  z-index: 1;
+}
+
+.item__color {
+  position: absolute;
+  bottom: -11px;
+  left: 56.5%;
+  margin: 10px 0;
+  transform: translateX(-50%);
+}
+
+.item__color-label {
+  position: relative;
+  margin: 0 5px 0 0;
+  padding: 1px 22px 0 0;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &_black::after {
+    background-color: $color-item-black;
+  }
+
+  &_brown::after {
+    background-color: $color-item-brown;
+  }
+
+  &_gold::after {
+    background-color: $color-item-gold;
+  }
+}
+
+.item__photo-zoom {
+  position: absolute;
+  bottom: -75px;
+  left: 56%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 13px 12px 8px 12px;
+  background-color: $color-text-dark;
+  transform: translateX(-50%);
+
+  & svg {
+    fill: $color-icon-zoom;
+  }
+}
+
+.item__color-input + .item__color-label {
+  border: 2px solid transparent;
+}
+
+.item__color-input:checked + .item__color-label {
+  border: 2px solid $color-text-dark;
+}
+
+.item__info-title {
+  margin: 0 0 2px 0;
+  padding: 0;
+  font-weight: 400;
+  color: $color-text-title;
+}
+
+.item__info-rate {
+  margin: 0 0 20px 0;
+}
+
+.item__info-price {
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-family: $font-secondary;
+  font-size: 48px;
+  line-height: 56px;
+  color: $color-text-mark;
+}
+
+.item__info-desc {
+  width: 65%;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+  color: $color-text-title;
+}
+
+.item__info-conditions {
+  margin: 0 0 43px 0;
+  padding: 0;
+  font-size: 14px;
+  color: $color-text-mark;
+}
+
+.item__info-add {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 3px;
+  padding: 17px 70px 13px 74px;
+  font-family: $font-secondary;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  color: $color-text-white;
+  background-color: $color-bg-red;
+
+  svg {
+    fill: $color-text-white;
+  }
+}
+
+@media (max-width: $width-desktop + 96) {
+  .item__info {
+    width: 50%;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .item__preview {
+    width: 318px;
+    min-width: auto;
+    margin: 0 60px 0 0;
+
+    &::before {
+      left: 50%;
+      width: 205px;
+      height: 283px;
+      border: 6px solid #f0ede8;
+      transform: translateX(-50%);
+    }
+  }
+
+  .item__color {
+    left: 52%;
+    transform: translateX(-50%);
+  }
+
+  .item__photo-zoom {
+    left: 50%;
+  }
+
+  .item__info-desc {
+    width: 100%;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .item {
+    margin: 0 0 28px 0;
+  }
+
+  .item__wrapper {
+    margin: 35px 6px 25px 6px;
+  }
+
+  .item__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .item__preview {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 0 104px 0;
+
+    &::before {
+      width: 240px;
+      height: 280px;
+    }
+  }
+
+  .item__info-title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .item__info-rate {
+    margin: 0;
+  }
+
+  .item__info-price {
+    margin: 0 0 7px 0;
+    font-size: 28px;
+    line-height: 56px;
+  }
+
+  .item__color {
+    margin: 3px 0;
+  }
+
+  .item__info-desc {
+    order: 1;
+    width: 95%;
+    margin: 0 0 14px 0;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .item__info-conditions {
+    order: 2;
+    margin: 0;
+  }
+
+  .item__info-add {
+    margin: 0 0 27px 0;
+    padding: 12px 38px 10px 32px;
+  }
+}

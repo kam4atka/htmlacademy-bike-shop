@@ -57,19 +57,18 @@
 
   &_prev {
     margin: 0 18px 0 0;
+
+    svg {
+      fill: $color-text-light;
+      transform: rotate(90deg);
+    }
   }
 
-  &_prev svg {
-    transform: rotate(90deg);
-  }
-
-  &_next svg {
-    transform: rotate(-90deg);
-  }
-
-  &_prev svg,
-  &_next svg {
-    fill: $color-text-light;
+  &_next {
+    svg {
+      fill: $color-text-light;
+      transform: rotate(-90deg);
+    }
   }
 
   &_mobile {
@@ -110,10 +109,12 @@
       margin: 0 5px 0 0;
     }
 
-    &_prev svg,
-    &_next svg {
-      width: 20px;
-      height: 20px;
+    &_prev,
+    &_next {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &_mobile {

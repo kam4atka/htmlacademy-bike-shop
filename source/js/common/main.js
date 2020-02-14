@@ -58,21 +58,44 @@
 
     var filterToggleHandler = function (ftEvt) {
       ftEvt.preventDefault();
-      // console.log(ftEvt.currentTarget);
       var item = ftEvt.currentTarget;
       item.classList.toggle('filter__block_hidden');
+    };
+
+    var aboutItemClose = function (list, className) {
+      for (var k = 0; k < list.length; k++) {
+        if (list[k].classList.contains(className)) {
+          list[k].classList.remove(className);
+        }
+      }
+    };
+
+    var aboutToggleHandler = function (atEvt) {
+      atEvt.preventDefault();
+      var root = document.querySelector('.item-about__wrapper');
+      if (atEvt.target.classList.contains('item-about__head') || atEvt.currentTarget.classList.contains('item-about__head')) {
+        aboutItemClose(root.children, 'item-about__item_checked');
+        atEvt.currentTarget.parentNode.classList.add('item-about__item_checked');
+      }
     };
 
     if (document.body.offsetWidth <= TABLET_SIZE) {
       var nav = document.querySelector('.nav-main');
       nav.addEventListener('click', navToggleHandler);
       var filterOpen = document.querySelector('.sort__toggle');
-      filterOpen.addEventListener('click', filterOpenHandler);
+      if (filterOpen) {
+        filterOpen.addEventListener('click', filterOpenHandler);
+      }
     }
 
     var filterBlocks = document.querySelectorAll('.filter__block');
     for (var i = 0; i < filterBlocks.length; i++) {
       filterBlocks[i].addEventListener('click', filterToggleHandler);
+    }
+
+    var aboutItems = document.querySelectorAll('.item-about__head');
+    for (var j = 0; j < aboutItems.length; j++) {
+      aboutItems[j].addEventListener('click', aboutToggleHandler);
     }
   };
   window.addEventListener('load', initPage);

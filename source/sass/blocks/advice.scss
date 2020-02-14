@@ -1,0 +1,41 @@
+.advice {
+  margin: 0 0 22px 0;
+}
+
+.advice__wrapper {
+  margin: 0 120px 0 115px;
+}
+
+.advice__title {
+  margin: 0 5px 73px 30px;
+  padding: 0;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  color: $color-text-dark;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: $width-desktop) {
+  .advice {
+    margin: 0 0 75px 0;
+  }
+
+  .advice__wrapper {
+    margin: 0 6px;
+  }
+
+  .advice__title {
+    margin: 0 0 25px 0;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .advice__wrapper {
+    margin: 28px 0 0 0;
+  }
+}

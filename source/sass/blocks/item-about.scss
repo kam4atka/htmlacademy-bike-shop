@@ -1,0 +1,201 @@
+.item-about {
+  max-width: 1366px;
+  margin: 0 auto 570px auto;
+}
+
+.item-about__wrapper {
+  position: relative;
+  margin: 0 153px 0 122px;
+}
+
+.item-about__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 330px;
+  overflow: hidden;
+
+  &_warranty .item-about__head {
+    left: 25%;
+  }
+
+  &_feedback .item-about__head {
+    left: 50%;
+  }
+
+  &_review .item-about__head {
+    left: 75%;
+  }
+
+  &_checked .item-about__head {
+    border-bottom: none;
+    opacity: 1;
+  }
+
+  &_checked .item-about__body {
+    display: block;
+  }
+}
+
+.item-about__head {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  text-align: center;
+  border-top: 1px solid $color-text-dark;
+  border-right: 1px solid $color-text-dark;
+  border-bottom: 1px solid $color-text-dark;
+  opacity: 0.6;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover .item-about__head-title,
+  &:focus .item-about__head-title {
+    color: $color-text-hover;
+  }
+
+  &:hover .item-about__head-icon,
+  &:focus .item-about__head-icon {
+    fill: $color-text-hover;
+  }
+}
+
+.item-about__head-icon {
+  display: none;
+}
+
+.item-about__head-title {
+  display: inline-block;
+  margin: 0;
+  padding: 14px 0;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  color: $color-text-dark;
+}
+
+.item-about__body {
+  display: none;
+  width: 100%;
+  padding: 110px 50px 62px 50px;
+  border-bottom: 1px solid $color-text-dark;
+  border-left: 1px solid $color-text-dark;
+  border-right: 1px solid $color-text-dark;
+}
+
+.item-about__body-desc {
+  margin: 0 0 37px 0;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  line-height: 30px;
+  color: $color-text-title;
+}
+
+.nojs {
+  .item-about {
+    margin: 0 auto 50px auto;
+  }
+
+  .item-about__item,
+  .item-about__body {
+    position: relative;
+    display: block;
+    min-height: auto;
+    margin-bottom: 15px;
+  }
+
+
+  .item-about__head {
+    opacity: 1;
+    border: 1px solid $color-text-dark;
+  }
+
+  .item-about__body {
+    border: 1px solid $color-text-dark;
+  }
+}
+
+@media (max-width: $width-desktop + 137) {
+  .item-about__head {
+    min-height: 90px;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: $width-desktop) {
+  .item-about {
+    max-width: $width-tablet;
+  }
+
+  .item-about__wrapper {
+    margin: 0;
+  }
+}
+
+@media (max-width: $width-tablet) {
+  .item-about {
+    width: 100%;
+    margin: 0;
+  }
+
+  .item-about__wrapper {
+    margin: 0;
+  }
+
+  .item-about__item {
+    position: relative;
+    min-height: auto;
+
+    &:last-of-type {
+      border-bottom: 1px solid $color-text-dark;
+    }
+
+    &_desc .item-about__head,
+    &_warranty .item-about__head,
+    &_feedback .item-about__head,
+    &_review .item-about__head {
+      left: auto;
+    }
+
+    &_checked .item-about__head-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .item-about__head {
+    position: relative;
+    left: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    min-height: auto;
+    padding: 2px 16px 0 16px;
+    text-align: left;
+    border: none;
+    border-top: 1px solid $color-text-dark;
+  }
+
+  .item-about__head-icon {
+    display: block;
+    fill: $color-text-dark;
+  }
+
+  .item-about__head-title {
+    line-height: 28px;
+  }
+
+  .item-about__body {
+    padding: 21px 16px;
+    border: none;
+  }
+
+  .item-about__body-desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,34 @@
+.info-rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info-rate__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 5px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-rate__item {
+  margin: 0 4px 0 0;
+
+  svg {
+    fill: $color-text-dark;
+    opacity: 0.3;
+  }
+
+  &_selected svg {
+    opacity: 1;
+  }
+}
+
+.info-rate__count {
+  font-size: 22px;
+  line-height: 30px;
+}
