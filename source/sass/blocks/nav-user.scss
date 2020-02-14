@@ -29,8 +29,23 @@
   }
 }
 
+.nav-user__item {
+  svg {
+    fill: $color-text-dark;
+  }
+}
+
 @media (max-width: $width-tablet) {
   .nav-user {
     margin-left: 0;
+  }
+
+  .nav-user__item {
+    display: none;
+
+    &_mobile {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }

@@ -13,33 +13,34 @@
   border-top: 1px solid $color-text-light;
   border-bottom: 1px solid $color-text-light;
   list-style: none;
-}
 
-.footer-nav__list li {
-  margin: 0 49px 0 0;
-  padding: 20px 0;
+  li {
+    margin: 0 49px 0 0;
+    padding: 20px 0;
 
-  &:last-of-type {
-    margin: 0;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  a {
+    font-family: $font-secondary;
+    letter-spacing: 0.2px;
+    color: $color-text-light;
+    text-decoration: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text-hover;
+    }
   }
 }
 
-.footer-nav__list a {
-  font-family: $font-secondary;
-  letter-spacing: 0.2px;
-  color: $color-text-light;
-  text-decoration: none;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    color: $color-text-hover;
-  }
-}
 
 @media (max-width: $width-desktop) {
   .footer-nav {
-    margin: 23px 42px;
+    margin: 23px 6px;
   }
 
   .footer-nav__list {

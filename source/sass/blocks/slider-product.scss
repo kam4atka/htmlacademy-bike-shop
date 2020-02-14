@@ -19,13 +19,13 @@
   height: 130px;
   margin: 57px 0 52px 0;
   z-index: 1;
-}
 
-.slider-product__photo img {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .slider-product__title {
@@ -94,10 +94,10 @@
 
   .slider-product__photo {
     margin: 57px 0 0 0;
-  }
 
-  .slider-product__photo img {
-    top: 20%;
+    img {
+      top: 20%;
+    }
   }
 
   .slider-product__basket {

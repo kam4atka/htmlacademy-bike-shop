@@ -14,7 +14,9 @@
     padding: 15px;
   }
 
-  .nojs .header-intro {
-    margin: 28px 0 0 0;
+  .nojs {
+    .header-intro {
+      margin: 28px 0 0 0;
+    }
   }
 }

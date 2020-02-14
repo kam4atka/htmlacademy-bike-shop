@@ -46,10 +46,10 @@
   &:focus {
     opacity: 0.6;
   }
-}
 
-.intro__social-link svg {
-  fill: $color-icon-social;
+  svg {
+    fill: $color-icon-social;
+  }
 }
 
 @media (max-width: $width-tablet) {
@@ -59,19 +59,21 @@
     margin: 0 0 137px 0;
   }
 
-  .nojs .intro__icon {
-    margin: 0 0 77px 0;
-  }
-
   .intro__link {
     margin: 0 0 167px 0;
   }
 
-  .nojs .intro__link {
-    margin: 0;
-  }
-
   .intro__social {
     display: none;
+  }
+
+  .nojs {
+    .intro__icon {
+      margin: 0 0 77px 0;
+    }
+
+    .intro__link {
+      margin: 0;
+    }
   }
 }

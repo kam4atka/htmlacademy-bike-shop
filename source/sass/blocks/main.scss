@@ -16,7 +16,9 @@
     margin: 0 15px;
   }
 
-  .nojs .main__wrapper {
-    flex-direction: column;
+  .nojs {
+    .main__wrapper {
+      flex-direction: column;
+    }
   }
 }

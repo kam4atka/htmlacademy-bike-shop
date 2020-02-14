@@ -55,10 +55,10 @@
 @media (max-width: $width-desktop) {
   .services__wrapper {
     padding: 20px 15px 0 15px;
-  }
 
-  .services__wrapper picture {
-    order: 1;
+    picture {
+      order: 1;
+    }
   }
 
   .services__preview {
