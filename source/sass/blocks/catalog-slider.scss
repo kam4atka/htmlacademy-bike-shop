@@ -1,13 +1,14 @@
 .catalog-slider__actions {
-  display: none;
+  // display: none;
 }
 
 .catalog-slider__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  // left: -7%;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  // overflow: hidden;
 }
 
 .catalog-slider__item {
@@ -16,14 +17,19 @@
   justify-content: center;
   align-items: center;
   min-width: 280px;
-  margin-right: 50px;
+  // margin-right: 50px;
+  opacity: 0.6;
 
-  &:last-of-type {
-    margin-right: 0;
-  }
+  // &:last-of-type {
+  //   margin-right: 0;
+  // }
 
   &_4x {
     margin-right: 4px;
+  }
+
+  &_active {
+    opacity: 1;
   }
 }
 

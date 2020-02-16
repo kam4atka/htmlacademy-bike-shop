@@ -100,13 +100,13 @@
 
     var rangeFilter = document.querySelector('.range__price');
     if (rangeFilter) {
+      formatRangeInput(rangeFilter);
       var rangeInputs = rangeFilter.querySelectorAll('#range-min, #range-max');
       for (var l = 0; l < rangeInputs.length; l++) {
         formatRangeInput(rangeInputs[l]);
         rangeInputs[l].addEventListener('change', rangeInputHandler);
       }
     }
-    formatRangeInput(rangeFilter);
 
     var filterBlocks = document.querySelectorAll('.filter__block');
     for (var i = 0; i < filterBlocks.length; i++) {
@@ -117,6 +117,27 @@
     for (var j = 0; j < aboutItems.length; j++) {
       aboutItems[j].addEventListener('click', aboutToggleHandler);
     }
+
+    // initial slider
+
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 55,
+      slidesPerGroup: 3,
+      // slidesPerGroupSkip: 1,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      centerInsufficientSlides: true,
+      slideClass: 'catalog-slider__item',
+      slideActiveClass: 'catalog-slider__item_active',
+      slidePrevClass: 'catalog-slider__item_active',
+      slideNextClass: 'catalog-slider__item_active',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
   };
   window.addEventListener('load', initPage);
 })();
