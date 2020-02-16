@@ -88,6 +88,26 @@
       }
     }
 
+    var formatRangeInput = function (element) {
+      var val = String(element.value);
+      var str = val.replace(/\s+/g, '');
+      element.value = Number(str).toLocaleString('ru-RU');
+    };
+
+    var rangeInputHandler = function (riEvt) {
+      formatRangeInput(riEvt.target);
+    };
+
+    var rangeFilter = document.querySelector('.range__price');
+    if (rangeFilter) {
+      var rangeInputs = rangeFilter.querySelectorAll('#range-min, #range-max');
+      for (var l = 0; l < rangeInputs.length; l++) {
+        formatRangeInput(rangeInputs[l]);
+        rangeInputs[l].addEventListener('change', rangeInputHandler);
+      }
+    }
+    formatRangeInput(rangeFilter);
+
     var filterBlocks = document.querySelectorAll('.filter__block');
     for (var i = 0; i < filterBlocks.length; i++) {
       filterBlocks[i].addEventListener('click', filterToggleHandler);

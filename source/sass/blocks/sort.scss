@@ -11,7 +11,6 @@
     fill: $color-text-dark;
   }
 
-  select,
   label {
     font-family: $font-secondary;
     letter-spacing: 1px;
@@ -28,10 +27,6 @@
 
   label:hover {
     opacity: 0.6;
-  }
-
-  option {
-    background-color: $color-bg-dark;
   }
 
   input:checked + label {
@@ -63,10 +58,10 @@
 }
 
 .sort__clear {
-  margin: 0 10.5% 0 0;
+  margin: 0 11% 0 0;
   padding: 0;
   font-family: $font-secondary;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
   color: $color-text-dark;
   background-color: transparent;
   border: none;
@@ -80,6 +75,10 @@
   &:hover svg,
   &:focus svg {
     fill: $color-text-hover;
+  }
+
+  span {
+    padding: 0 3px 0 0;
   }
 }
 
@@ -122,7 +121,7 @@
   margin: 0 4% 0 0;
   padding: 0;
   font-family: $font-secondary;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: $color-text-dark;
   background-color: transparent;
   border: none;
@@ -154,10 +153,6 @@
   .sort {
     margin: 0 15px;
     padding: 58px 0 0 0;
-
-    select {
-      display: none;
-    }
   }
 
   .sort__wrapper {
@@ -184,6 +179,10 @@
 
   .sort__clear,
   .sort__count {
+    display: none;
+  }
+
+  .sort__select {
     display: none;
   }
 }

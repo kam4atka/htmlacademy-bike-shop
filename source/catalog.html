@@ -122,11 +122,13 @@
                     <use xlink:href="#icon-close">
                   </svg>
                 </button>
-                <select name="sorting" id="sorting">
-                  <option value="popular" selected>По популярности</option>
-                  <option value="priceup">По убыванию</option>
-                  <option value="pricedown">По возврастанию</option>
-                </select>
+                <div class="sort__select select-block">
+                  <select name="sorting" id="sorting">
+                    <option value="popular" selected>По популярности</option>
+                    <option value="priceup">По убыванию</option>
+                    <option value="pricedown">По возврастанию</option>
+                  </select>
+                </div>
                 <div class="sort__count">
                   <p class="sort__count-title">Показывать по</p>
                   <input class="visually-hidden" type="radio" name="sort-count" value="12" id="count-12" checked>
@@ -171,18 +173,20 @@
                 </button>
               </div>
               <div class="filter__wrapper">
-                <select name="sorting" id="sorting-filter">
-                  <option value="popular" selected>По популярности</option>
-                  <option value="priceup">По убыванию</option>
-                  <option value="pricedown">По возврастанию</option>
-                </select>
+                <div class="filter__select select-block">
+                  <select name="sorting" id="sorting-filter">
+                    <option value="popular" selected>По популярности</option>
+                    <option value="priceup">По убыванию</option>
+                    <option value="pricedown">По возврастанию</option>
+                  </select>
+                </div>
                 <div class="filter__block">
                   <fieldset>
                     <legend class="visually-hidden">Цена</legend>
                     <div class="range">
                       <div class="range__price">
-                        <input type="number" name="range-min" id="range-min" value="28000">
-                        <input type="number" name="range-max" id="range-max" value="180000">
+                        <input type="text" name="range-min" id="range-min" value="28000">
+                        <input type="text" name="range-max" id="range-max" value="180000">
                       </div>
                       <div class="range__view">
                         <span class="range__roller range__roller_min"></span>

@@ -1,0 +1,38 @@
+.select-block {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    display: block;
+    width: 12px;
+    height: 6px;
+    background-image: url("../img/icon-open.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform: translateY(-50%);
+  }
+
+  select {
+    padding: 0 16px 0 0;
+    font-family: $font-secondary;
+    letter-spacing: 0.7px;
+    color: $color-text-dark;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text-hover;
+    }
+  }
+
+  option {
+    background-color: $color-bg-dark;
+  }
+}
