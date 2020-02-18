@@ -2,6 +2,10 @@
   padding: 125px 115px 69px 123px;
 }
 
+.club__promo {
+  margin: 0 25px 0 0;
+}
+
 .club__preview {
   width: 529px;
   max-width: none;
@@ -15,7 +19,7 @@
 }
 
 .club__promo-desc {
-  width: 82%;
+  width: 86%;
   margin: 0 0 10px 0;
   padding: 0;
 
@@ -72,5 +76,9 @@
 @media (max-width: $width-tablet) {
   .club__wrapper {
     padding: 31px 15px 20px 15px;
+  }
+
+  .club__promo {
+    margin: 0;
   }
 }

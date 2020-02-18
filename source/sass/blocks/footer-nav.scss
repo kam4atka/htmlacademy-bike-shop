@@ -15,8 +15,11 @@
   list-style: none;
 
   li {
+    max-width: 200px;
     margin: 0 49px 0 0;
     padding: 20px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:last-of-type {
       margin: 0;

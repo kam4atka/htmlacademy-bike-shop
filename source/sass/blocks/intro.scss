@@ -3,6 +3,7 @@
 }
 
 .intro__link {
+  max-width: 380px;
   margin: 0 221px 196px 0;
   padding: 17px 66px;
   font-family: $font-secondary;
@@ -14,6 +15,8 @@
   background-color: rgba(26, 25, 24, 0.8);
   border: 1px solid $color-text-light;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
@@ -60,6 +63,7 @@
   }
 
   .intro__link {
+    max-width: 300px;
     margin: 0 0 167px 0;
   }
 

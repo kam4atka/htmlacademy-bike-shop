@@ -13,7 +13,10 @@
   list-style: none;
 
   li {
+    max-width: 200px;
     margin-right: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:last-of-type {
       margin-right: 0;
@@ -81,6 +84,7 @@
   .nav-main_close .nav-main__head-toggle {
     position: absolute;
     left: 105%;
+    top: 19px;
   }
 
   .nav-main__head-toggle {
@@ -121,7 +125,12 @@
     }
 
     span {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 150px;
       margin-left: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
@@ -167,8 +176,11 @@
     }
 
     li {
+      max-width: 200px;
       padding: 20px 0;
       border-bottom: 1px solid $color-text-dark;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &:last-of-type {
         border-bottom: none;

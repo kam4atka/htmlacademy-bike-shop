@@ -40,7 +40,10 @@
 }
 
 .footer-links__copyright {
+  max-width: 300px;
   margin: 0 0 0 17%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   span {
     font-size: 14px;

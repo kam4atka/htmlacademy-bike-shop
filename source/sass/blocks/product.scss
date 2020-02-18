@@ -39,6 +39,8 @@
   text-decoration: none;
   text-transform: uppercase;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
@@ -51,10 +53,13 @@
 }
 
 .product__desc {
+  max-width: 100%;
   margin: 0;
   padding: 0;
   font-size: 14px;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product__basket {
@@ -72,12 +77,15 @@
 }
 
 .product__price {
+  max-width: 100%;
   margin: 12px 0 0 0;
   padding: 0;
   font-family: $font-secondary;
   font-size: 24px;
   line-height: 30px;
   color: $color-text-mark;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &_4x {
     margin: 8px 0 0 0;

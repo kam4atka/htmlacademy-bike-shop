@@ -6,19 +6,26 @@
 }
 
 .block-info__title {
+  max-width: 550px;
   font-family: $font-secondary;
   font-size: 48px;
   line-height: 56px;
   text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block-info__desc {
+  max-width: 550px;
   font-size: 20px;
   line-height: 29px;
   letter-spacing: 1.25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block-info__link {
+  max-width: 550px;
   display: inline-block;
   vertical-align: middle;
   font-family: $font-secondary;
@@ -29,10 +36,20 @@
   text-transform: uppercase;
   border: 1px solid $color-text-light;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
     color: $color-text-hover;
+  }
+}
+
+@media (max-width: $width-desktop + 1) {
+  .block-info__title,
+  .block-info__desc,
+  .block-info__link {
+    max-width: 470px;
   }
 }
 
@@ -53,5 +70,11 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0;
+  }
+
+  .block-info__title,
+  .block-info__desc,
+  .block-info__link {
+    max-width: 300px;
   }
 }

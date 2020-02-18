@@ -23,8 +23,11 @@
 .catalog__title,
 .catalog__condition {
   width: 60%;
+  max-width: 100%;
   color: $color-text-title;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .catalog__condition {
