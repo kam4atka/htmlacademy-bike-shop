@@ -3,5 +3,8 @@
   "rules": {
     "declaration-no-important": true,
     "indentation": [2, {"ignore": ["inside-parens"]}]
-  }
+  },
+  "ignoreFiles": [
+      "source/sass/swiper.scss"
+  ]
 }
