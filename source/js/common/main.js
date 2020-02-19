@@ -19,6 +19,10 @@
     var navToggleHandler = function (ntEvt) {
       if (ntEvt.target.classList.contains('nav-main__head-toggle_open')) {
         ntEvt.preventDefault();
+        var filterBlock = getFilterStatus();
+        if (filterBlock !== false && !filterBlock.classList.contains('filter_mobile')) {
+          closeFilter(filterBlock);
+        }
         ntEvt.currentTarget.classList.remove('nav-main_close');
         ntEvt.target.classList.remove('nav-main__head-toggle_open');
         ntEvt.target.classList.add('nav-main__head-toggle_close');
@@ -35,31 +39,43 @@
       }
     };
 
+    var getFilterStatus = function () {
+      var filter = document.querySelector('.filter');
+      if (filter && !filter.classList.contains('.filter_mobile')) {
+        return filter;
+      } else {
+        return false;
+      }
+    };
+
+    var closeFilter = function (block) {
+      block.classList.add('filter_mobile');
+      bodyScroll('on');
+      block.removeEventListener('click', filterCloseHandler);
+    };
+
     var filterCloseHandler = function (fcEvt) {
       var root = fcEvt.currentTarget;
       if (fcEvt.target.classList.contains('filter__close')) {
         if (!root.classList.contains('filter_mobile')) {
-          root.classList.add('filter_mobile');
-          bodyScroll('on');
-          root.removeEventListener('click', filterCloseHandler);
+          closeFilter(root);
         }
       }
     };
 
     var filterOpenHandler = function (foEvt) {
-      var filter = document.querySelector('.filter');
-      if (filter.classList.contains('filter_mobile')) {
+      var filterBlock = getFilterStatus();
+      if (filterBlock !== false && filterBlock.classList.contains('filter_mobile')) {
         foEvt.preventDefault();
-        filter.classList.remove('filter_mobile');
+        filterBlock.classList.remove('filter_mobile');
         bodyScroll('off');
-        filter.addEventListener('click', filterCloseHandler);
+        filterBlock.addEventListener('click', filterCloseHandler);
       }
     };
 
     var filterToggleHandler = function (ftEvt) {
       ftEvt.preventDefault();
-      var item = ftEvt.currentTarget;
-      item.classList.toggle('filter__block_hidden');
+      ftEvt.currentTarget.parentNode.classList.toggle('filter__block_hidden');
     };
 
     var aboutItemClose = function (list, className) {
@@ -108,7 +124,7 @@
       }
     }
 
-    var filterBlocks = document.querySelectorAll('.filter__block');
+    var filterBlocks = document.querySelectorAll('.filter__block-head');
     for (var i = 0; i < filterBlocks.length; i++) {
       filterBlocks[i].addEventListener('click', filterToggleHandler);
     }
@@ -118,25 +134,39 @@
       aboutItems[j].addEventListener('click', aboutToggleHandler);
     }
 
-    // initial slider
+    // initial slider bikes
+    if (document.querySelector('.swiper-container_bikes')) {
+      var swiperBikes = new Swiper('.swiper-container_bikes', {
+        slidesPerView: 3,
+        spaceBetween: 55,
+        slidesPerGroup: 3,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        centerInsufficientSlides: true,
+        slideClass: 'catalog-slider__slide',
+        slideActiveClass: 'catalog-slider__item_active',
+        slidePrevClass: 'catalog-slider__item_active',
+        slideNextClass: 'catalog-slider__item_active',
+        navigation: {
+          nextEl: '.catalog-slider__next',
+          prevEl: '.catalog-slider__prev'
+        }
+      });
+    }
 
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 55,
-      slidesPerGroup: 3,
-      // slidesPerGroupSkip: 1,
-      centeredSlides: true,
-      centeredSlidesBounds: true,
-      centerInsufficientSlides: true,
-      slideClass: 'catalog-slider__item',
-      slideActiveClass: 'catalog-slider__item_active',
-      slidePrevClass: 'catalog-slider__item_active',
-      slideNextClass: 'catalog-slider__item_active',
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    // var swiperSpares = new Swiper('.swiper-container_spares', {
+    //   slidesPerView: 4,
+    //   spaceBetween: 55,
+    //   slidesPerGroup: 4,
+    //   centeredSlides: true,
+    //   centeredSlidesBounds: true,
+    //   centerInsufficientSlides: true,
+    //   slideClass: 'catalog-spares__slide',
+    //   navigation: {
+    //     nextEl: '.catalog-spares__next',
+    //     prevEl: '.catalog-spares__prev'
+    //   }
+    // });
 
   };
   window.addEventListener('load', initPage);
