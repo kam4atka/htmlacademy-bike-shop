@@ -31,7 +31,9 @@
 }
 
 .pagination__item {
+  max-width: 33px;
   margin: 0 10px 0 0;
+  overflow: hidden;
 
   &:last-of-type {
     margin: 0;

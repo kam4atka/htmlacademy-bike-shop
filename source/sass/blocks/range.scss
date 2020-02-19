@@ -52,12 +52,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 13px;
+    left: 86px;
     width: 10px;
     height: 1px;
     background-color: $color-text-dark;
-    transform: translate(-50%);
   }
 
   input {

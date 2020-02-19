@@ -17,6 +17,7 @@
   }
 
   select {
+    max-width: 95%;
     padding: 0 16px 0 0;
     font-family: $font-secondary;
     letter-spacing: 0.7px;
@@ -25,6 +26,8 @@
     border: none;
     outline: none;
     appearance: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:hover,
     &:focus {

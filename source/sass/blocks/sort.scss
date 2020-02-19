@@ -55,9 +55,15 @@
 
 .sort__toggle {
   display: none;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sort__clear {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 170px;
   margin: 0 11% 0 0;
   padding: 0;
   font-family: $font-secondary;
@@ -66,6 +72,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  overflow: hidden;
 
   &:hover,
   &:focus {
@@ -78,8 +85,19 @@
   }
 
   span {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 150px;
     padding: 0 3px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+}
+
+.sort__select {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sort__count {
@@ -91,9 +109,12 @@
   margin: 0 0 0 auto;
 
   label {
+    max-width: 50px;
     position: relative;
     margin: 0 8px 0 0;
     padding: 0 10px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &::after {
       content: "";
@@ -118,6 +139,7 @@
 }
 
 .sort__count-title {
+  max-width: 150px;
   margin: 0 4% 0 0;
   padding: 0;
   font-family: $font-secondary;
@@ -125,6 +147,8 @@
   color: $color-text-dark;
   background-color: transparent;
   border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sort__view {

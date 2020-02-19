@@ -13,6 +13,7 @@
   }
 
   h3 {
+    max-width: 180px;
     margin: 0;
     padding: 0;
     font-family: $font-secondary;
@@ -21,6 +22,8 @@
     line-height: 18px;
     letter-spacing: 0.7px;
     color: $color-text-dark;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   label {
@@ -40,6 +43,7 @@
 }
 
 .filter__clear {
+  max-width: 180px;
   margin: 0;
   padding: 0;
   font-family: $font-secondary;
@@ -57,6 +61,14 @@
   &:hover svg,
   &:focus svg {
     fill: $color-text-hover;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -121,9 +133,12 @@
   align-items: flex-start;
 
   label {
+    max-width: 180px;
     position: relative;
     margin: 0 0 12.2px 0;
     padding: 0 0 0 27px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &::before {
       content: "";
@@ -202,6 +217,7 @@
 
   .filter__select {
     display: inline-block;
+    max-width: 160px;
     margin: 0 0 63px 0;
   }
 
