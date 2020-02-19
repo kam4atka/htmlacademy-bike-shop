@@ -135,38 +135,78 @@
     }
 
     // initial slider bikes
-    if (document.querySelector('.swiper-container_bikes')) {
-      var swiperBikes = new Swiper('.swiper-container_bikes', {
-        slidesPerView: 3,
-        spaceBetween: 55,
-        slidesPerGroup: 3,
+
+    if (document.querySelector('.swiper-bikes')) {
+      var swiperBikes = new Swiper('.swiper-container__bikes', {
+        initialSlide: 2,
         centeredSlides: true,
         centeredSlidesBounds: true,
         centerInsufficientSlides: true,
-        slideClass: 'catalog-slider__slide',
-        slideActiveClass: 'catalog-slider__item_active',
-        slidePrevClass: 'catalog-slider__item_active',
-        slideNextClass: 'catalog-slider__item_active',
+        loop: true,
         navigation: {
           nextEl: '.catalog-slider__next',
           prevEl: '.catalog-slider__prev'
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            slideClass: 'catalog-slider__item',
+            slideActiveClass: 'catalog-slider__item_active'
+          },
+          850: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            slideClass: 'catalog-slider__item',
+            slideActiveClass: 'catalog-slider__item_active'
+          },
+          1100: {
+            slidesPerView: 4,
+            slidesPerGroup: 3,
+            slideClass: 'catalog-slider__item',
+            slideActiveClass: 'catalog-slider__item_active',
+            slidePrevClass: 'catalog-slider__item_active',
+            slideNextClass: 'catalog-slider__item_active'
+          }
         }
       });
     }
 
-    // var swiperSpares = new Swiper('.swiper-container_spares', {
-    //   slidesPerView: 4,
-    //   spaceBetween: 55,
-    //   slidesPerGroup: 4,
-    //   centeredSlides: true,
-    //   centeredSlidesBounds: true,
-    //   centerInsufficientSlides: true,
-    //   slideClass: 'catalog-spares__slide',
-    //   navigation: {
-    //     nextEl: '.catalog-spares__next',
-    //     prevEl: '.catalog-spares__prev'
-    //   }
-    // });
+    if (document.querySelector('.swiper-spares')) {
+      var swiperSpares = new Swiper('.swiper-container__spares', {
+        initialSlide: 1,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        centerInsufficientSlides: true,
+        loop: true,
+        navigation: {
+          nextEl: '.catalog-spares__next',
+          prevEl: '.catalog-spares__prev'
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            slideClass: 'catalog-spares__item',
+            slideActiveClass: 'catalog-spares__item_active'
+          },
+          850: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            slideClass: 'catalog-spares__item',
+            slideActiveClass: 'catalog-spares__item_active'
+          },
+          1100: {
+            slidesPerView: 5,
+            slidesPerGroup: 4,
+            slideClass: 'catalog-spares__item',
+            // slideActiveClass: 'catalog-spares__item_active',
+            // slidePrevClass: 'catalog-spares__item_active',
+            // slideNextClass: 'catalog-spares__item_active'
+          }
+        }
+      });
+    }
 
   };
   window.addEventListener('load', initPage);
