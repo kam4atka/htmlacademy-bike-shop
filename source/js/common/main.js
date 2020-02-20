@@ -137,7 +137,7 @@
     // initial slider bikes
 
     if (document.querySelector('.swiper-bikes')) {
-      var swiperBikes = new Swiper('.swiper-container__bikes', {
+      var swiperBikes = new Swiper('.swiper-bikes', {
         initialSlide: 2,
         centeredSlides: true,
         centeredSlidesBounds: true,
@@ -156,7 +156,7 @@
           },
           850: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerGroup: 1,
             slideClass: 'catalog-slider__item',
             slideActiveClass: 'catalog-slider__item_active'
           },
@@ -173,8 +173,7 @@
     }
 
     if (document.querySelector('.swiper-spares')) {
-      var swiperSpares = new Swiper('.swiper-container__spares', {
-        initialSlide: 1,
+      var swiperSpares = new Swiper('.swiper-spares', {
         centeredSlides: true,
         centeredSlidesBounds: true,
         centerInsufficientSlides: true,
@@ -191,18 +190,19 @@
             slideActiveClass: 'catalog-spares__item_active'
           },
           850: {
-            slidesPerView: 4,
-            slidesPerGroup: 4,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
             slideClass: 'catalog-spares__item',
             slideActiveClass: 'catalog-spares__item_active'
           },
           1100: {
-            slidesPerView: 5,
-            slidesPerGroup: 4,
+            initialSlide: 5,
+            slidesPerView: 4,
+            slidesPerGroup: 3,
             slideClass: 'catalog-spares__item',
-            // slideActiveClass: 'catalog-spares__item_active',
-            // slidePrevClass: 'catalog-spares__item_active',
-            // slideNextClass: 'catalog-spares__item_active'
+            slideActiveClass: 'catalog-spares__item_active',
+            slidePrevClass: 'catalog-spares__item_active',
+            slideNextClass: 'catalog-spares__item_active'
           }
         }
       });

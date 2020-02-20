@@ -2,6 +2,12 @@
   display: none;
 }
 
+.nav-main__head-user {
+  svg {
+    fill: $color-text-dark;
+  }
+}
+
 .nav-main__list {
   display: flex;
   flex-direction: row;
