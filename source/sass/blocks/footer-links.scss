@@ -100,9 +100,11 @@
   }
 }
 
-@media (max-width: $width-desktop) {
+@media (max-width: $width-tablet) {
   .footer-links {
     margin: 0 15px 30px 15px;
+    padding: 23px 0 0 0;
+    border-top: 1px solid $color-text-dark;
   }
 
   .footer-links__social {

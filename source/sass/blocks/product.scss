@@ -6,10 +6,18 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 167px;
-    height: 228px;
     border: 6px solid $color-bg-light;
     transform: translateX(-50%);
+  }
+
+  &_main::before {
+    width: 166px;
+    height: 228px;
+  }
+
+  &_catalog::before {
+    width: 178px;
+    height: 239px;
   }
 }
 
@@ -30,7 +38,7 @@
 
 .product__title {
   max-width: 280px;
-  margin: 0 0 2px 0; // !
+  margin: 0 0 2px 0;
   font-family: $font-secondary;
   font-size: 24px;
   line-height: 30px;
@@ -98,6 +106,10 @@
       width: 178px;
       height: 178px;
     }
+    &_main::before {
+      width: 166px;
+      height: 166px;
+    }
   }
 
   .product__photo {
@@ -118,6 +130,7 @@
 
     &_4x {
       width: 55%;
+      margin: 0 0 1px 0;
     }
   }
 

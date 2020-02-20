@@ -9,6 +9,11 @@
     background-color: $color-bg-intro;
     background-position: center;
   }
+
+  &_main .footer-links {
+    padding: 0;
+    border: none;
+  }
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {

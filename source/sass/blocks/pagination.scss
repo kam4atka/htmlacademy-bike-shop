@@ -4,18 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 31px 122px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    background-color: $color-text-dark;
-    transform: translateY(-50%);
-  }
+  margin: 30px 122px;
 }
 
 .pagination__list {
@@ -86,15 +75,7 @@
 
 @media (max-width: $width-tablet) {
   .pagination {
-    margin: 29px 9px 80px 9px;
-
-    &::after {
-      width: 96%;
-      top: unset;
-      bottom: -58px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    margin: 29px 9px 56px 9px;
   }
 
   .pagination__list {
