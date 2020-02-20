@@ -6,13 +6,17 @@
   margin: 41px 122px;
   padding: 0;
   list-style: none;
+  overflow: hidden;
 }
 
 .breadcrumbs__item {
   position: relative;
+  max-width: 150px;
   margin: 0 8px 0 0;
   padding: 0 14px 0 0;
   font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &::after {
     content: "/";

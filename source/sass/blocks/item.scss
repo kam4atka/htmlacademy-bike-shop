@@ -115,12 +115,15 @@
 }
 
 .item__info-price {
+  max-width: 300px;
   margin: 0 0 15px 0;
   padding: 0;
   font-family: $font-secondary;
   font-size: 48px;
   line-height: 56px;
   color: $color-text-mark;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item__info-desc {
@@ -131,18 +134,24 @@
   line-height: 30px;
   letter-spacing: 1.2px;
   color: $color-text-title;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item__info-conditions {
+  width: 90%;
   margin: 0 0 43px 0;
   padding: 0;
   font-size: 14px;
   color: $color-text-mark;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item__info-add {
   display: inline-block;
   vertical-align: middle;
+  max-width: 50%;
   margin: 0 0 0 3px;
   padding: 17px 70px 13px 74px;
   font-family: $font-secondary;
@@ -152,6 +161,8 @@
   text-decoration: none;
   color: $color-text-white;
   background-color: $color-bg-red;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   svg {
     fill: $color-text-white;
@@ -190,6 +201,10 @@
 
   .item__info-desc {
     width: 100%;
+  }
+
+  .item__info-add {
+    max-width: 75%;
   }
 }
 
@@ -254,6 +269,7 @@
   .item__info-conditions {
     order: 2;
     margin: 0;
+    text-align: center;
   }
 
   .item__info-add {

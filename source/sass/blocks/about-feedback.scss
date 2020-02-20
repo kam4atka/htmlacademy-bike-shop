@@ -7,9 +7,14 @@
 
 .about-feedback__name,
 .about-feedback__date {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .about-feedback__name {
@@ -40,8 +45,13 @@
 
 .about-feedback__title,
 .about-feedback__desc {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .about-feedback__title,
@@ -54,25 +64,29 @@
 }
 
 .about-feedback__desc {
-  margin: 0 0 37px 0;
+  margin: 0 0 33px 0;
   font-size: 22px;
   letter-spacing: 0.2px;
-  line-height: 30px;
+  line-height: 34px;
   color: $color-text-title;
 }
 
 .about-feedback__link {
   display: inline-block;
   vertical-align: middle;
+  max-width: 100%;
   padding: 16px 55px 12px 55px;
   text-decoration: none;
   border: 1px solid $color-text-title;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: $width-tablet) {
   .about-feedback__item {
     &:last-of-type {
       display: block;
+      margin: 0 0 9px 0;
     }
   }
 

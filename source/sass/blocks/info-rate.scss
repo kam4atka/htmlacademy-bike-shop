@@ -29,6 +29,9 @@
 }
 
 .info-rate__count {
+  max-width: 100px;
   font-size: 22px;
   line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
