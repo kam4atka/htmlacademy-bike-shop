@@ -106,15 +106,11 @@
 }
 
 .nojs {
-  .item-about {
-  }
-
   .item-about__item,
   .item-about__body {
     position: relative;
     display: block;
   }
-
 
   .item-about__head {
     border: 1px solid $color-text-dark;
@@ -134,12 +130,8 @@
 }
 
 @media (max-width: $width-desktop) {
- .item-about {
+  .item-about {
     margin: 0 50px 75px 50px;
-  }
-
-  .item-about__wrapper {
-
   }
 }
 
@@ -184,10 +176,6 @@
   .item-about__head-icon {
     display: inline-block;
     vertical-align: middle;
-  }
-
-  .item-about__head-title {
-
   }
 
   .item-about__body {
