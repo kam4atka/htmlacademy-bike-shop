@@ -1071,8 +1071,8 @@
   };
 
   SwiperClass.prototype.emit = function emit () {
-      var args = [], len = arguments.length;
-      while ( len-- ) args[ len ] = arguments[ len ];
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
 
     var self = this;
     if (!self.eventsListeners) { return self; }
@@ -1116,7 +1116,7 @@
   };
 
   SwiperClass.prototype.useModules = function useModules (modulesParams) {
-      if ( modulesParams === void 0 ) modulesParams = {};
+    if ( modulesParams === void 0 ) modulesParams = {};
 
     var instance = this;
     if (!instance.modules) { return; }
@@ -1155,8 +1155,8 @@
   };
 
   SwiperClass.installModule = function installModule (module) {
-      var params = [], len = arguments.length - 1;
-      while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
+    var params = [], len = arguments.length - 1;
+    while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
 
     var Class = this;
     if (!Class.prototype.modules) { Class.prototype.modules = {}; }
@@ -1182,8 +1182,8 @@
   };
 
   SwiperClass.use = function use (module) {
-      var params = [], len = arguments.length - 1;
-      while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
+    var params = [], len = arguments.length - 1;
+    while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
 
     var Class = this;
     if (Array.isArray(module)) {
@@ -1342,7 +1342,6 @@
         );
       }
       if (slide.css('display') === 'none') { continue; } // eslint-disable-line
-
       if (params.slidesPerView === 'auto') {
         var slideStyles = win.getComputedStyle(slide[0], null);
         var currentTransform = slide[0].style.transform;

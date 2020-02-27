@@ -54,16 +54,16 @@
   }
 
   .club__promo-title {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
     text-align: center;
   }
 
   .club__promo-desc {
-    width: 80%;
+    width: 100%;
     margin: 0 auto 12px auto;
 
     &:last-of-type {
-      margin: 0 auto 35px auto;
+      margin: 0 auto 33px auto;
     }
   }
 
@@ -75,7 +75,7 @@
 
 @media (max-width: $width-tablet) {
   .club__wrapper {
-    padding: 31px 15px 20px 15px;
+    padding: 28px 15px 20px 15px;
   }
 
   .club__promo {

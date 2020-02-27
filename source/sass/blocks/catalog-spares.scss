@@ -44,10 +44,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 280px;
   opacity: 0.2;
 
-  &_active {
+  &_active,
+  &_next,
+  &_next + & {
     opacity: 1;
   }
 }

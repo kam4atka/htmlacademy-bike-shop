@@ -91,8 +91,8 @@ gulp.task("html", function () {
 
 gulp.task("js-common", function () {
   return gulp.src("source/js/common/*.js")
+    .pipe(concat("main.js"))
     .pipe(uglify())
-    .pipe(rename("main.js"))
     .pipe(gulp.dest("build/js"));
 });
 

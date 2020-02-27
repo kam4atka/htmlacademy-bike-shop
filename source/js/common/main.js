@@ -2,6 +2,16 @@
 
 (function () {
   var initPage = function () {
+
+    // for swiper.js - startsWidth
+
+    if (!String.prototype.startsWith) {
+      String.prototype.startsWith = function (searchString, position) {
+        position = position || 0;
+        return this.substr(position, searchString.length) === searchString;
+      };
+    }
+
     var TABLET_SIZE = 767;
 
     var nojs = document.querySelector('.nojs');
@@ -139,71 +149,94 @@
     if (document.querySelector('.swiper-bikes')) {
       var swiperBikes = new Swiper('.swiper-bikes', {
         initialSlide: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
         centeredSlides: true,
         centeredSlidesBounds: true,
         centerInsufficientSlides: true,
         loop: true,
+        slideClass: 'catalog-slider__item',
+        slideActiveClass: 'catalog-slider__item_active',
         navigation: {
           nextEl: '.catalog-slider__next',
           prevEl: '.catalog-slider__prev'
         },
         breakpoints: {
-          320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            slideClass: 'catalog-slider__item',
-            slideActiveClass: 'catalog-slider__item_active'
-          },
-          850: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            slideClass: 'catalog-slider__item',
-            slideActiveClass: 'catalog-slider__item_active'
-          },
-          1100: {
+          1200: {
             slidesPerView: 4,
             slidesPerGroup: 3,
-            slideClass: 'catalog-slider__item',
             slideActiveClass: 'catalog-slider__item_active',
             slidePrevClass: 'catalog-slider__item_active',
             slideNextClass: 'catalog-slider__item_active'
+          },
+          900: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
           }
         }
       });
     }
 
+    // initial slider spares
+    var offset = -0.101;
     if (document.querySelector('.swiper-spares')) {
       var swiperSpares = new Swiper('.swiper-spares', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        initialSlide: 0,
         centeredSlides: true,
-        centeredSlidesBounds: true,
-        centerInsufficientSlides: true,
         loop: true,
+        slideActiveClass: 'catalog-spares__item_active',
         navigation: {
           nextEl: '.catalog-spares__next',
           prevEl: '.catalog-spares__prev'
         },
         breakpoints: {
-          320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            slideClass: 'catalog-spares__item',
-            slideActiveClass: 'catalog-spares__item_active'
-          },
-          850: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            slideClass: 'catalog-spares__item',
-            slideActiveClass: 'catalog-spares__item_active'
-          },
-          1100: {
-            initialSlide: 5,
-            slidesPerView: 4,
-            slidesPerGroup: 3,
-            slideClass: 'catalog-spares__item',
-            slideActiveClass: 'catalog-spares__item_active',
+          1200: {
+            initialSlide: 0,
+            slidesPerView: 5,
+            slidesPerGroup: 4,
+            slidesOffsetBefore: window.innerWidth * offset,
             slidePrevClass: 'catalog-spares__item_active',
-            slideNextClass: 'catalog-spares__item_active'
-          }
+            slideNextClass: 'catalog-spares__item_next'
+          },
+          900: {
+            slidesPerView: 3,
+            slidesOffsetBefore: 0,
+            initialSlide: 1,
+          },
+        }
+      });
+    }
+
+    // initial slider advice
+
+    if (document.querySelector('.swiper-advice')) {
+      var swiperAdvice = new Swiper('.swiper-advice', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        initialSlide: 0,
+        centeredSlides: true,
+        loop: true,
+        slideActiveClass: 'catalog-spares__item_active',
+        navigation: {
+          nextEl: '.catalog-spares__next',
+          prevEl: '.catalog-spares__prev'
+        },
+        breakpoints: {
+          1200: {
+            initialSlide: 0,
+            slidesPerView: 5,
+            slidesPerGroup: 4,
+            slidesOffsetBefore: window.innerWidth * offset,
+            slidePrevClass: 'catalog-spares__item_active',
+            slideNextClass: 'catalog-spares__item_next'
+          },
+          900: {
+            slidesPerView: 3,
+            slidesOffsetBefore: 0,
+            initialSlide: 1,
+          },
         }
       });
     }
