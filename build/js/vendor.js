@@ -1071,8 +1071,8 @@
   };
 
   SwiperClass.prototype.emit = function emit () {
-      var args = [], len = arguments.length;
-      while ( len-- ) args[ len ] = arguments[ len ];
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
 
     var self = this;
     if (!self.eventsListeners) { return self; }
@@ -1116,7 +1116,7 @@
   };
 
   SwiperClass.prototype.useModules = function useModules (modulesParams) {
-      if ( modulesParams === void 0 ) modulesParams = {};
+    if ( modulesParams === void 0 ) modulesParams = {};
 
     var instance = this;
     if (!instance.modules) { return; }
@@ -1155,8 +1155,8 @@
   };
 
   SwiperClass.installModule = function installModule (module) {
-      var params = [], len = arguments.length - 1;
-      while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
+    var params = [], len = arguments.length - 1;
+    while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
 
     var Class = this;
     if (!Class.prototype.modules) { Class.prototype.modules = {}; }
@@ -1182,8 +1182,8 @@
   };
 
   SwiperClass.use = function use (module) {
-      var params = [], len = arguments.length - 1;
-      while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
+    var params = [], len = arguments.length - 1;
+    while ( len-- > 0 ) params[ len ] = arguments[ len + 1 ];
 
     var Class = this;
     if (Array.isArray(module)) {
@@ -1294,7 +1294,7 @@
     // Calc slides
     var slideSize;
     var slidesPerColumn = params.slidesPerColumn;
-    var slidesPerRow = slidesNumberEvenToRows / slidesPerColumn;
+    var slidesPerRow = slidesNumberEvenToRows / slidesPerColumn; // -> NaN
     var numFullColumns = Math.floor(slidesLength / params.slidesPerColumn);
     for (var i = 0; i < slidesLength; i += 1) {
       slideSize = 0;
@@ -1342,7 +1342,7 @@
         );
       }
       if (slide.css('display') === 'none') { continue; } // eslint-disable-line
-
+      console.log(params.slidesPerView);
       if (params.slidesPerView === 'auto') {
         var slideStyles = win.getComputedStyle(slide[0], null);
         var currentTransform = slide[0].style.transform;
@@ -1361,11 +1361,14 @@
           // eslint-disable-next-line
           if (swiper.isHorizontal()) {
             var width = parseFloat(slideStyles.getPropertyValue('width'));
+            // console.log('width ' + width);
             var paddingLeft = parseFloat(slideStyles.getPropertyValue('padding-left'));
+            // console.log('paddingLeft ' + paddingLeft)
             var paddingRight = parseFloat(slideStyles.getPropertyValue('padding-right'));
             var marginLeft = parseFloat(slideStyles.getPropertyValue('margin-left'));
             var marginRight = parseFloat(slideStyles.getPropertyValue('margin-right'));
             var boxSizing = slideStyles.getPropertyValue('box-sizing');
+            // console.log('boxSizing ' + boxSizing);
             if (boxSizing && boxSizing === 'border-box') {
               slideSize = width + marginLeft + marginRight;
             } else {
@@ -1412,6 +1415,7 @@
 
       if (params.centeredSlides) {
         slidePosition = slidePosition + (slideSize / 2) + (prevSlideSize / 2) + spaceBetween;
+        // slidePosition = slidePosition + (slideSize) + (prevSlideSize) + spaceBetween;
         if (prevSlideSize === 0 && i !== 0) { slidePosition = slidePosition - (swiperSize / 2) - spaceBetween; }
         if (i === 0) { slidePosition = slidePosition - (swiperSize / 2) - spaceBetween; }
         if (Math.abs(slidePosition) < 1 / 1000) { slidePosition = 0; }
