@@ -39,3 +39,11 @@
     background-color: $color-bg-dark;
   }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .select-block {
+    &::after {
+      content: none;
+    }
+  }
+}
