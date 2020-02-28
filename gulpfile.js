@@ -99,6 +99,7 @@ gulp.task("js-common", function () {
 gulp.task("js-vendor", function () {
   return gulp.src("source/js/vendor/*.js")
     .pipe(concat("vendor.js"))
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 

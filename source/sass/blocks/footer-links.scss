@@ -9,6 +9,14 @@
   align-items: center;
 }
 
+.footer-links__logo {
+  outline: none;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
 .footer-links__social {
   display: flex;
   flex-direction: row;
