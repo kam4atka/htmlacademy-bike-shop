@@ -32,7 +32,7 @@
 }
 
 .catalog-spares__wrapper {
-  margin: 0 0 65px 0;
+  margin: 0 0 68px 11px;
 }
 
 .catalog-spares__list {
@@ -56,6 +56,10 @@
 .catalog-spares__actions {
   position: relative;
   width: 100%;
+}
+
+.catalog-spares__links {
+  margin: 70px 107px 0 121px;
 }
 
 @media (max-width: $width-tablet) {
@@ -90,5 +94,9 @@
 
   .catalog-spares__list {
     margin-bottom: 22px;
+  }
+
+  .catalog-spares__links {
+    margin: 0 15px;
   }
 }

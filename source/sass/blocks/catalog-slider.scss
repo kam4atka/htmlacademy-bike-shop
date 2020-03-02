@@ -4,7 +4,7 @@
   &__prev,
   &__next {
     position: absolute;
-    top: -317px;
+    top: -320px;
     background-color: transparent;
     border: none;
     z-index: 3;
@@ -23,7 +23,7 @@
   }
 
   &__next {
-    right: 46px;
+    right: 33px;
 
     svg {
       transform: rotate(-90deg);
@@ -59,7 +59,7 @@
 
 .catalog-slider__links {
   position: relative;
-  margin: 72px 120px 0 120px;
+  margin: 73px 107px 0 121px;
   text-align: center;
 
   &::after {
@@ -87,7 +87,7 @@
   max-width: 300px;
   display: inline-block;
   vertical-align: middle;
-  padding: 14px 52px;
+  padding: 14px 51px;
   font-family: $font-secondary;
   font-size: 24px;
   line-height: 30px;

@@ -3,7 +3,7 @@
 }
 
 .advice__title {
-  margin: 0 5px 73px 30px;
+  margin: 0 5px 73px 35px;
   padding: 0;
   font-family: $font-secondary;
   font-weight: 400;
@@ -15,11 +15,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-// .advice__slider-prev,
-// .advice__slider-next {
-//   top: -319px;
-// }
 
 .advice__slider-prev {
   left: 96px;
@@ -52,5 +47,13 @@
 
   .advice__slider {
     padding: 0;
+  }
+
+  .advice__slider-prev {
+    left: 0;
+  }
+
+  .advice__slider-next {
+    right: 0;
   }
 }
