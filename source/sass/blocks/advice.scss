@@ -16,6 +16,19 @@
   text-overflow: ellipsis;
 }
 
+// .advice__slider-prev,
+// .advice__slider-next {
+//   top: -319px;
+// }
+
+.advice__slider-prev {
+  left: 96px;
+}
+
+.advice__slider-next {
+  right: 96px;
+}
+
 @media (max-width: $width-desktop) {
   .advice {
     margin: 0 0 30px 0;

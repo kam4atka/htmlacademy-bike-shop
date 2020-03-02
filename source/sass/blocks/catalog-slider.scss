@@ -4,7 +4,7 @@
   &__prev,
   &__next {
     position: absolute;
-    top: -319px;
+    top: -317px;
     background-color: transparent;
     border: none;
     z-index: 3;
@@ -15,7 +15,7 @@
   }
 
   &__prev {
-    left: 46px;
+    left: 44px;
 
     svg {
       transform: rotate(90deg);
