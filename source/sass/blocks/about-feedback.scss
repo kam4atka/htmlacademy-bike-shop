@@ -80,6 +80,12 @@
   border: 1px solid $color-text-title;
   overflow: hidden;
   text-overflow: ellipsis;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-text-hover;
+  }
 }
 
 @media (max-width: $width-tablet) {

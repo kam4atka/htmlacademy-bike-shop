@@ -89,9 +89,31 @@
   padding: 13px 12px 8px 12px;
   background-color: $color-text-dark;
   transform: translateX(-50%);
+  outline: none;
 
   & svg {
     fill: $color-icon-zoom;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.item__photo-plus {
+  position: absolute;
+  right: 67px;
+  bottom: -32px;
+  outline: none;
+
+  & svg {
+    fill: $color-text-dark;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
   }
 }
 
@@ -101,6 +123,11 @@
 
 .item__color-input:checked + .item__color-label {
   border: 2px solid $color-text-dark;
+}
+
+.item__color-input:hover + .item__color-label,
+.item__color-input:focus + .item__color-label {
+  opacity: 0.7;
 }
 
 .item__info-title {
@@ -163,9 +190,15 @@
   background-color: $color-bg-red;
   overflow: hidden;
   text-overflow: ellipsis;
+  outline: none;
 
   svg {
     fill: $color-text-white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
   }
 }
 

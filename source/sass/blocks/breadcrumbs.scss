@@ -14,9 +14,20 @@
   max-width: 150px;
   margin: 0 8px 0 0;
   padding: 0 14px 0 0;
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+  a {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: $color-text-dark;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text-hover;
+    }
+  }
 
   &::after {
     content: "/";
